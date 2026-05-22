@@ -3,1899 +3,1879 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>日本 冬旅 2026 ｜關西 × 三重 × 名古屋 × 大阪</title>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<title>日本自由行 2026｜名古屋・伊勢・三重 10泊11日</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --ink: #1C1810;
-  --paper: #F8F4EE;
-  --cream: #EDE8DF;
-  --gold: #B8860B;
-  --gold-light: #D4A843;
-  --rust: #8B3A1E;
-  --moss: #3D5A3E;
-  --navy: #1A2744;
-  --red: #C0392B;
-  --muted: #7A6F62;
-  --border: rgba(28,24,16,0.12);
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 300;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-/* ── HERO ── */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background: var(--navy);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  text-align: center;
-  padding: 2rem;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 30% 40%, rgba(180,134,11,0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 80% at 80% 70%, rgba(139,58,30,0.15) 0%, transparent 50%);
-}
-
-.hero-pattern {
-  position: absolute;
-  inset: 0;
-  opacity: 0.06;
-  background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.5) 39px, rgba(255,255,255,0.5) 40px),
-    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.5) 39px, rgba(255,255,255,0.5) 40px);
-}
-
-.hero-jp {
-  position: absolute;
-  right: -20px;
-  top: 50%;
-  transform: translateY(-50%);
-  writing-mode: vertical-rl;
-  font-family: 'Zen Old Mincho', serif;
-  font-size: clamp(80px, 14vw, 180px);
-  font-weight: 900;
-  color: rgba(255,255,255,0.04);
-  letter-spacing: 0.05em;
-  user-select: none;
-  pointer-events: none;
-}
-
-.hero-content { position: relative; z-index: 2; }
-
-.hero-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  border: 1px solid rgba(184,134,11,0.5);
-  padding: 6px 20px;
-  border-radius: 2px;
-  font-size: 11px;
-  letter-spacing: 4px;
-  color: var(--gold-light);
-  margin-bottom: 28px;
-  font-weight: 400;
-}
-
-.hero-eyebrow::before,
-.hero-eyebrow::after {
-  content: '─';
-  opacity: 0.5;
-}
-
-.hero h1 {
-  font-family: 'Zen Old Mincho', serif;
-  font-size: clamp(36px, 7vw, 88px);
-  font-weight: 900;
-  color: #fff;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin-bottom: 8px;
-}
-
-.hero h1 span {
-  color: var(--gold-light);
-}
-
-.hero-sub {
-  font-size: clamp(13px, 2vw, 16px);
-  color: rgba(255,255,255,0.5);
-  letter-spacing: 3px;
-  margin-bottom: 48px;
-  font-weight: 300;
-}
-
-.hero-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 56px;
-}
-
-.pill {
-  background: rgba(255,255,255,0.07);
-  border: 0.5px solid rgba(255,255,255,0.15);
-  border-radius: 2px;
-  padding: 8px 18px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.75);
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.pill .pi { font-size: 15px; }
-
-.flight-bar {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.flight-card {
-  background: rgba(255,255,255,0.06);
-  border: 0.5px solid rgba(184,134,11,0.4);
-  border-radius: 4px;
-  padding: 12px 22px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.flight-card .arrow { color: var(--gold-light); font-size: 20px; }
-
-.flight-card .fc-detail {
-  text-align: left;
-}
-
-.flight-card .fc-route {
-  font-size: 15px;
-  font-weight: 500;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
-.flight-card .fc-time {
-  font-size: 11px;
-  color: rgba(255,255,255,0.5);
-  margin-top: 2px;
-}
-
-.scroll-hint {
-  position: absolute;
-  bottom: 36px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: rgba(255,255,255,0.3);
-  font-size: 10px;
-  letter-spacing: 3px;
-  animation: bounce 2s ease-in-out infinite;
-}
-
-.scroll-hint::after {
-  content: '';
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(6px); }
-}
-
-/* ── NAV ── */
-.sticky-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(26,39,68,0.97);
-  backdrop-filter: blur(10px);
-  border-bottom: 0.5px solid rgba(184,134,11,0.3);
-  padding: 0 20px;
-}
-
-.nav-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  gap: 0;
-  overflow-x: auto;
-}
-
-.nav-btn {
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
-  padding: 14px 18px;
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  color: rgba(255,255,255,0.45);
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: 400;
-  white-space: nowrap;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.nav-btn:hover { color: rgba(255,255,255,0.8); }
-.nav-btn.active { color: var(--gold-light); border-bottom-color: var(--gold-light); font-weight: 500; }
-
-/* ── MAIN CONTENT ── */
-.main { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
-
-.section { padding: 60px 0; }
-
-.section-title {
-  font-family: 'Zen Old Mincho', serif;
-  font-size: clamp(24px, 4vw, 40px);
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 6px;
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-}
-
-.section-title::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-
-.section-sub {
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: 2px;
-  margin-bottom: 36px;
-  font-weight: 400;
-}
-
-/* ── DAY CARDS ── */
-.day-grid { display: flex; flex-direction: column; gap: 16px; }
-
-.day-card {
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  overflow: hidden;
-  transition: box-shadow 0.2s;
-  background: #fff;
-}
-
-.day-card:hover { box-shadow: 0 4px 24px rgba(28,24,16,0.08); }
-
-.day-header {
-  display: grid;
-  grid-template-columns: 56px 1fr auto;
-  align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.day-num-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-}
-
-.day-num {
-  width: 44px;
-  height: 44px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Zen Old Mincho', serif;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.day-header-text { min-width: 0; }
-.day-date { font-size: 11px; color: var(--muted); letter-spacing: 1px; font-weight: 400; margin-bottom: 3px; }
-.day-title-text { font-size: 15px; font-weight: 500; color: var(--navy); }
-.day-route { font-size: 12px; color: var(--muted); margin-top: 3px; }
-
-.day-right { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
-.day-cost-badge {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--rust);
-  background: rgba(139,58,30,0.07);
-  padding: 4px 12px;
-  border-radius: 2px;
-  white-space: nowrap;
-}
-
-.chevron {
-  font-size: 18px;
-  color: var(--muted);
-  transition: transform 0.3s;
-  line-height: 1;
-}
-
-.chevron.open { transform: rotate(180deg); }
-
-.day-body {
-  display: none;
-  border-top: 1px solid var(--border);
-}
-
-.day-body.open { display: block; }
-
-.stop-section-label {
-  padding: 10px 20px 6px;
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--muted);
-  font-weight: 500;
-  background: var(--cream);
-  border-bottom: 0.5px solid var(--border);
-}
-
-.stop {
-  display: grid;
-  grid-template-columns: 36px 1fr auto;
-  gap: 12px;
-  align-items: start;
-  padding: 12px 20px;
-  border-bottom: 0.5px solid var(--border);
-}
-
-.stop:last-child { border-bottom: none; }
-
-.stop-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.stop-content {}
-.stop-name { font-size: 13px; font-weight: 500; color: var(--ink); }
-.stop-note { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.6; }
-
-.tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
-.tag {
-  font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 2px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-}
-
-.tag-warn  { background: #FFF3E0; color: #8B4500; border: 0.5px solid rgba(139,69,0,0.2); }
-.tag-free  { background: #E8F5E9; color: #2E7D32; border: 0.5px solid rgba(46,125,50,0.2); }
-.tag-jrp   { background: #E3F2FD; color: #1565C0; border: 0.5px solid rgba(21,101,192,0.2); }
-.tag-shop  { background: #FCE4EC; color: #880E4F; border: 0.5px solid rgba(136,14,79,0.2); }
-
-.stop-amt { font-size: 12px; font-weight: 500; white-space: nowrap; margin-top: 3px; }
-.amt-free { color: var(--moss); }
-.amt-cost { color: var(--ink); }
-
-/* Day color themes */
-.d1 .day-num { background: #E3F2FD; color: #1565C0; }
-.d2 .day-num { background: #FCE4EC; color: #880E4F; }
-.d3 .day-num { background: #E8F5E9; color: #2E7D32; }
-.d4 .day-num { background: #FFF8E1; color: #8B6500; }
-.d5 .day-num { background: #E3F2FD; color: #1565C0; }
-.d6 .day-num { background: #E8F5E9; color: #2E7D32; }
-.d7 .day-num { background: #FCE4EC; color: #880E4F; }
-.d8 .day-num { background: #E8F5E9; color: #2E7D32; }
-.d9 .day-num { background: #FAECE7; color: #7B2D14; }
-.d10 .day-num { background: #FCE4EC; color: #880E4F; }
-.d11 .day-num { background: #F5F5F5; color: #555; }
-
-/* ── BUDGET ── */
-.budget-section { background: var(--navy); color: #fff; border-radius: 8px; overflow: hidden; }
-
-.budget-header {
-  padding: 28px 32px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  background: linear-gradient(135deg, rgba(184,134,11,0.15), transparent);
-}
-
-.budget-header h2 {
-  font-family: 'Zen Old Mincho', serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.budget-header p { font-size: 12px; color: rgba(255,255,255,0.45); letter-spacing: 1px; }
-
-.budget-total-strip {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 0;
-}
-
-.btotal-item {
-  padding: 20px 24px;
-  border-right: 0.5px solid rgba(255,255,255,0.08);
-  border-bottom: 0.5px solid rgba(255,255,255,0.08);
-}
-
-.btotal-item:last-child { border-right: none; }
-.btotal-label { font-size: 10px; letter-spacing: 2px; color: rgba(255,255,255,0.4); margin-bottom: 6px; font-weight: 400; }
-.btotal-value { font-size: 22px; font-weight: 500; color: var(--gold-light); }
-.btotal-sub { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 3px; }
-
-.budget-breakdown { padding: 24px 32px; }
-
-.budget-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-.budget-table th {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: rgba(255,255,255,0.35);
-  font-weight: 400;
-  padding: 8px 0;
-  text-align: left;
-  border-bottom: 0.5px solid rgba(255,255,255,0.1);
-}
-
-.budget-table th:last-child { text-align: right; }
-
-.budget-table td {
-  padding: 10px 0;
-  border-bottom: 0.5px solid rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.8);
-  vertical-align: top;
-}
-
-.budget-table td:last-child { text-align: right; font-weight: 500; color: #fff; }
-
-.budget-table .cat-row td {
-  padding-top: 18px;
-  padding-bottom: 4px;
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: rgba(255,255,255,0.3);
-  border-bottom: none;
-  font-weight: 400;
-}
-
-.budget-table .subtotal td {
-  font-weight: 500;
-  color: var(--gold-light);
-  border-top: 0.5px solid rgba(184,134,11,0.3);
-  border-bottom: none;
-}
-
-.budget-table .grand td {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--gold-light);
-  border-top: 1px solid rgba(184,134,11,0.5);
-  border-bottom: none;
-  padding-top: 16px;
-}
-
-.budget-table .note-row td {
-  font-size: 11px;
-  color: rgba(255,255,255,0.3);
-  padding-top: 4px;
-  padding-bottom: 2px;
-  border-bottom: none;
-}
-
-/* ── TICKETS ── */
-.ticket-grid { display: grid; gap: 12px; }
-
-.ticket-card {
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 18px 20px;
-  background: #fff;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 16px;
-  align-items: start;
-}
-
-.ticket-name { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.ticket-note { font-size: 12px; color: var(--muted); line-height: 1.6; }
-.ticket-price { font-size: 15px; font-weight: 700; color: var(--rust); text-align: right; white-space: nowrap; }
-.ticket-per { font-size: 11px; color: var(--muted); margin-top: 3px; text-align: right; }
-
-.badge-important {
-  background: var(--rust);
-  color: #fff;
-  font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 2px;
-  letter-spacing: 1px;
-  font-weight: 400;
-  white-space: nowrap;
-}
-
-.badge-jrp {
-  background: var(--navy);
-  color: #fff;
-  font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 2px;
-  letter-spacing: 1px;
-  font-weight: 400;
-}
-
-/* ── HOTELS ── */
-.hotel-grid { display: grid; gap: 12px; }
-
-.hotel-card {
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  overflow: hidden;
-  background: #fff;
-}
-
-.hotel-header {
-  background: var(--navy);
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.hotel-city { font-size: 14px; font-weight: 500; color: #fff; letter-spacing: 1px; }
-.hotel-nights { font-size: 11px; color: var(--gold-light); letter-spacing: 1px; margin-top: 2px; }
-.hotel-budget-badge {
-  background: rgba(184,134,11,0.2);
-  border: 0.5px solid rgba(184,134,11,0.4);
-  color: var(--gold-light);
-  font-size: 13px;
-  font-weight: 500;
-  padding: 4px 14px;
-  border-radius: 2px;
-  white-space: nowrap;
-}
-
-.hotel-body { padding: 16px 20px; }
-
-.hotel-rec {
-  display: flex;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 0.5px solid var(--border);
-  align-items: flex-start;
-}
-
-.hotel-rec:last-child { border-bottom: none; }
-
-.hotel-rec-num {
-  width: 22px;
-  height: 22px;
-  background: var(--cream);
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--muted);
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.hotel-rec-info {}
-.hotel-rec-name { font-size: 13px; font-weight: 500; color: var(--ink); }
-.hotel-rec-note { font-size: 12px; color: var(--muted); margin-top: 3px; line-height: 1.5; }
-
-/* ── SHOPPING ── */
-.shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-
-.shop-card {
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 20px;
-  background: #fff;
-}
-
-.shop-icon { font-size: 32px; margin-bottom: 10px; }
-.shop-name { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
-.shop-spots { font-size: 12px; color: var(--muted); line-height: 1.8; }
-
-/* ── TIPS ── */
-.tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
-
-.tip-card {
-  background: var(--cream);
-  border-radius: 6px;
-  padding: 18px 20px;
-  border-left: 3px solid var(--gold);
-}
-
-.tip-title { font-size: 13px; font-weight: 500; color: var(--navy); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-.tip-body { font-size: 12px; color: var(--muted); line-height: 1.7; }
-
-/* ── FOOTER ── */
-footer {
-  background: var(--navy);
-  color: rgba(255,255,255,0.35);
-  text-align: center;
-  padding: 32px 20px;
-  font-size: 11px;
-  letter-spacing: 2px;
-  margin-top: 80px;
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 600px) {
-  .day-header { grid-template-columns: 48px 1fr; }
-  .day-right { display: none; }
-  .stop { grid-template-columns: 32px 1fr; }
-  .stop-amt { display: none; }
-  .btotal-item { padding: 16px; }
-  .budget-breakdown { padding: 16px; }
-  .ticket-card { grid-template-columns: 1fr; }
-  .ticket-price { text-align: left; }
-}
-
-/* ── Animations ── */
-.day-card { transition: box-shadow 0.25s; }
+  :root {
+    --sakura: #E8B4C0;
+    --sakura-light: #F9EEF1;
+    --sakura-dark: #C4778A;
+    --matcha: #6B8F71;
+    --matcha-light: #E8F0E9;
+    --matcha-dark: #3D5940;
+    --ink: #1A1A2E;
+    --ink-mid: #2D2D4E;
+    --cream: #FBF7F2;
+    --warm-white: #FEFCFA;
+    --gold: #C9A84C;
+    --gold-light: #F5EDD8;
+    --shadow-sm: 0 2px 12px rgba(26,26,46,0.06);
+    --shadow-md: 0 6px 32px rgba(26,26,46,0.10);
+    --shadow-lg: 0 16px 64px rgba(26,26,46,0.14);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Zen Kaku Gothic New', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-weight: 300;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--ink);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 60% at 30% 60%, rgba(200,120,138,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 80% 30%, rgba(107,143,113,0.12) 0%, transparent 60%),
+      linear-gradient(160deg, #0F0F1E 0%, #1A1A2E 40%, #16162A 100%);
+  }
+
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: 
+      repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.8) 40px, rgba(255,255,255,0.8) 41px),
+      repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,0.8) 40px, rgba(255,255,255,0.8) 41px);
+  }
+
+  .sakura-float {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: floatPetal 8s ease-in-out infinite;
+    opacity: 0.3;
+  }
+
+  @keyframes floatPetal {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+    50% { transform: translateY(-20px) rotate(15deg); opacity: 0.5; }
+  }
+
+  .hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    padding: 2rem;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.3em;
+    color: var(--sakura);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.3s;
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    color: #FEFCFA;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.5s;
+  }
+
+  .hero-title span { color: var(--sakura); }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.15em;
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.7s;
+  }
+
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 1s ease forwards 0.9s;
+  }
+
+  .pill {
+    padding: 0.4rem 1.1rem;
+    border: 1px solid rgba(232,180,192,0.35);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.05em;
+  }
+
+  .pill.accent {
+    background: rgba(232,180,192,0.12);
+    border-color: var(--sakura);
+    color: var(--sakura);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    animation: fadeUp 1s ease forwards 1.4s;
+    opacity: 0;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollLine {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+
+  /* OVERVIEW */
+  .section { padding: 5rem 2rem; }
+  .section.alt { background: var(--warm-white); }
+
+  .container { max-width: 900px; margin: 0 auto; }
+  .container-wide { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: var(--matcha);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    color: rgba(26,26,46,0.6);
+    font-size: 1rem;
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
+
+  /* FLIGHT CARD */
+  .flight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 600px) {
+    .flight-grid { grid-template-columns: 1fr; }
+  }
+
+  .flight-card {
+    background: var(--ink);
+    border-radius: 20px;
+    padding: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .flight-card::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    background: rgba(232,180,192,0.08);
+  }
+
+  .flight-card.arrival { background: linear-gradient(135deg, #1A1A2E, #2D2D4E); }
+  .flight-card.departure { background: linear-gradient(135deg, #3D5940, #2D4433); }
+
+  .flight-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 100px;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 1.25rem;
+  }
+
+  .flight-number {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  .flight-route {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .airport { font-weight: 700; font-size: 1.3rem; letter-spacing: 0.05em; }
+  .route-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    position: relative;
+  }
+  .route-line::after {
+    content: '✈';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.9rem;
+    color: var(--sakura);
+    background: var(--ink);
+    padding: 0 4px;
+  }
+  .flight-card.departure .route-line::after { background: #2D4433; }
+
+  .flight-times {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .flight-time-val { font-size: 1.1rem; color: white; font-weight: 500; }
+
+  /* INFO CARDS */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .info-card {
+    background: white;
+    border: 1px solid rgba(26,26,46,0.07);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .info-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+  .info-label { font-size: 0.75rem; color: rgba(26,26,46,0.45); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.35rem; }
+  .info-value { font-weight: 500; font-size: 0.95rem; color: var(--ink); line-height: 1.5; }
+
+  /* TICKETS */
+  .ticket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .ticket-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid rgba(26,26,46,0.07);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .ticket-header {
+    padding: 1rem 1.25rem 0.75rem;
+    background: var(--gold-light);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .ticket-type { font-size: 0.72rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; margin-bottom: 0.25rem; }
+  .ticket-name { font-weight: 600; font-size: 0.95rem; color: var(--ink); }
+  .ticket-body { padding: 1rem 1.25rem; }
+  .ticket-desc { font-size: 0.85rem; color: rgba(26,26,46,0.65); line-height: 1.7; }
+  .ticket-price { margin-top: 0.75rem; font-weight: 600; color: var(--matcha-dark); font-size: 0.9rem; }
+
+  /* DAY TIMELINE */
+  .days-container { padding: 4rem 2rem; }
+
+  .days-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    position: sticky;
+    top: 0;
+    background: var(--cream);
+    padding: 1rem 0;
+    z-index: 10;
+    border-bottom: 1px solid rgba(26,26,46,0.07);
+  }
+
+  .day-nav-btn {
+    padding: 0.4rem 0.9rem;
+    border-radius: 100px;
+    border: 1px solid rgba(26,26,46,0.15);
+    background: transparent;
+    font-size: 0.8rem;
+    color: rgba(26,26,46,0.6);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+
+  .day-nav-btn:hover, .day-nav-btn.active {
+    background: var(--ink);
+    color: white;
+    border-color: var(--ink);
+  }
+
+  .day-block {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .day-block.visible {
+    display: block;
+    opacity: 1;
+  }
+
+  .day-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .day-num {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .day-num .num { font-size: 1.5rem; font-weight: 700; line-height: 1; }
+  .day-num .label { font-size: 0.55rem; letter-spacing: 0.15em; opacity: 0.6; }
+
+  .day-info { padding-top: 0.25rem; }
+  .day-date { font-size: 0.8rem; color: var(--matcha); letter-spacing: 0.1em; font-weight: 500; }
+  .day-title { font-family: 'Noto Serif JP', serif; font-size: 1.5rem; font-weight: 700; color: var(--ink); margin: 0.2rem 0; }
+  .day-subtitle { font-size: 0.9rem; color: rgba(26,26,46,0.55); }
+
+  .timeline {
+    position: relative;
+    padding-left: 2.5rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--sakura) 0%, transparent 100%);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 1.75rem;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2.5rem;
+    top: 0.35rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--sakura);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .timeline-dot.meal { border-color: var(--gold); }
+  .timeline-dot.transport { border-color: var(--matcha); }
+  .timeline-dot.shopping { border-color: var(--sakura-dark); }
+
+  .timeline-dot .dot-inner {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--sakura);
+  }
+  .timeline-dot.meal .dot-inner { background: var(--gold); }
+  .timeline-dot.transport .dot-inner { background: var(--matcha); }
+  .timeline-dot.shopping .dot-inner { background: var(--sakura-dark); }
+
+  .timeline-time {
+    font-size: 0.75rem;
+    color: var(--matcha);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-content { }
+
+  .timeline-title {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.875rem;
+    color: rgba(26,26,46,0.6);
+    line-height: 1.7;
+  }
+
+  .timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+  }
+
+  .tag {
+    padding: 0.2rem 0.65rem;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 500;
+  }
+
+  .tag.spot { background: var(--sakura-light); color: var(--sakura-dark); }
+  .tag.food { background: var(--gold-light); color: #8B5E10; }
+  .tag.shop { background: #EDE9F7; color: #5B4A8A; }
+  .tag.transport { background: var(--matcha-light); color: var(--matcha-dark); }
+  .tag.chiikawa { background: #FFF0F5; color: #D4607A; border: 1px solid #F5C0CE; }
+  .tag.note { background: #F3F4F6; color: #666; }
+
+  /* HOTEL */
+  .hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .hotel-card {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid rgba(26,26,46,0.07);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .hotel-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .hotel-emoji {
+    font-size: 2rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--sakura-light), var(--matcha-light));
+  }
+
+  .hotel-body { padding: 1.25rem; }
+  .hotel-nights { font-size: 0.72rem; color: var(--matcha); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; margin-bottom: 0.25rem; }
+  .hotel-name { font-family: 'Noto Serif JP', serif; font-size: 1.1rem; font-weight: 700; color: var(--ink); margin-bottom: 0.4rem; line-height: 1.3; }
+  .hotel-location { font-size: 0.83rem; color: rgba(26,26,46,0.55); margin-bottom: 0.75rem; }
+  .hotel-access { font-size: 0.82rem; color: rgba(26,26,46,0.65); line-height: 1.6; margin-bottom: 0.75rem; }
+  .hotel-budget { font-weight: 600; color: var(--matcha-dark); font-size: 0.9rem; }
+  .hotel-note { font-size: 0.78rem; color: rgba(26,26,46,0.45); margin-top: 0.35rem; }
+
+  /* SHOPPING */
+  .shopping-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .shop-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.25rem;
+    border: 1px solid rgba(26,26,46,0.07);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shop-emoji { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+  .shop-name { font-weight: 600; font-size: 0.95rem; color: var(--ink); margin-bottom: 0.5rem; }
+  .shop-items { font-size: 0.82rem; color: rgba(26,26,46,0.6); line-height: 1.7; }
+
+  /* BUDGET */
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(26,26,46,0.07);
+  }
+
+  .budget-table th {
+    background: var(--ink);
+    color: white;
+    padding: 0.9rem 1.25rem;
+    text-align: left;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .budget-table td {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(26,26,46,0.05);
+    color: var(--ink);
+  }
+
+  .budget-table tr:last-child td { border-bottom: none; }
+  .budget-table tr.total td { background: var(--gold-light); font-weight: 600; color: #8B5E10; }
+
+  /* TIPS */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .tip-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.25rem;
+    border-left: 3px solid var(--sakura);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .tip-card.green { border-color: var(--matcha); }
+  .tip-card.gold { border-color: var(--gold); }
+
+  .tip-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .tip-title { font-weight: 600; font-size: 0.92rem; margin-bottom: 0.4rem; color: var(--ink); }
+  .tip-desc { font-size: 0.82rem; color: rgba(26,26,46,0.65); line-height: 1.7; }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+  }
+
+  footer strong { color: var(--sakura); }
+
+  /* DIVIDER */
+  .zen-divider {
+    text-align: center;
+    padding: 1rem 0 2rem;
+    font-size: 1.2rem;
+    opacity: 0.2;
+    letter-spacing: 1rem;
+  }
+
+  /* HIGHLIGHT BOX */
+  .highlight-box {
+    background: linear-gradient(135deg, var(--sakura-light), var(--gold-light));
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(232,180,192,0.3);
+  }
+
+  .highlight-box p {
+    font-size: 0.88rem;
+    color: var(--ink-mid);
+    line-height: 1.8;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .section { padding: 3.5rem 1.25rem; }
+    .days-container { padding: 3rem 1.25rem; }
+    .hero-title { font-size: 2.2rem; }
+    .day-header { gap: 1rem; }
+    .day-num { width: 56px; height: 56px; }
+    .day-num .num { font-size: 1.2rem; }
+  }
+
+  /* BADGE */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .badge.chiikawa {
+    background: #FFF0F5;
+    color: #D4607A;
+    border: 1px solid #F5C0CE;
+  }
+
+  .badge.pikachu {
+    background: #FFFAE8;
+    color: #9A7A10;
+    border: 1px solid #F0DE80;
+  }
 </style>
 </head>
 <body>
 
 <!-- HERO -->
-<div class="hero">
+<section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-pattern"></div>
-  <div class="hero-jp">冬の旅</div>
-
+  <span class="sakura-float" style="top:15%;left:8%;animation-delay:0s;">🌸</span>
+  <span class="sakura-float" style="top:70%;left:5%;animation-delay:1.5s;font-size:1rem;">🌸</span>
+  <span class="sakura-float" style="top:25%;right:10%;animation-delay:0.8s;">🌸</span>
+  <span class="sakura-float" style="top:65%;right:7%;animation-delay:2.2s;font-size:1rem;">🌸</span>
   <div class="hero-content">
-    <div class="hero-eyebrow">2026 WINTER JAPAN</div>
-    <h1>關西 × 三重<br><span>× 名古屋 × 大阪</span></h1>
-    <p class="hero-sub">2026 / 12 / 18 — 12 / 28　冬日十一天自由行</p>
-
+    <p class="hero-eyebrow">✈ 日本自由行 2026 ✈</p>
+    <h1 class="hero-title">名古屋 · 伊勢 · 三重<br><span>10泊11日</span></h1>
+    <p class="hero-subtitle">2026 / 12 / 18 — 12 / 28　大人 2 位</p>
     <div class="hero-pills">
-      <div class="pill"><span class="pi">👤</span>2位大人</div>
-      <div class="pill"><span class="pi">🐭</span>Chiikawa / 皮克敏 / 扭蛋</div>
-      <div class="pill"><span class="pi">🚃</span>全程大眾交通</div>
-      <div class="pill"><span class="pi">🍱</span>高 CP 在地美食</div>
-      <div class="pill"><span class="pi">🌙</span>輕鬆步調</div>
+      <span class="pill accent">Chiikawa 探店</span>
+      <span class="pill">任天堂博物館</span>
+      <span class="pill">伊勢神宮</span>
+      <span class="pill">鳥羽水族館</span>
+      <span class="pill">御在所岳</span>
+      <span class="pill">扭蛋 · 玩具</span>
     </div>
+  </div>
+  <div class="scroll-hint">
+    <span>往下捲動</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-    <div class="flight-bar">
-      <div class="flight-card">
-        <div class="arrow">✈</div>
-        <div class="fc-detail">
-          <div class="fc-route">CI 156　桃園 → 關西</div>
-          <div class="fc-time">12/18（五）　08:05 → 11:35</div>
+<!-- FLIGHT INFO -->
+<section class="section alt">
+  <div class="container">
+    <p class="section-label">✈ 航班資訊</p>
+    <h2 class="section-title">去程 · 回程</h2>
+    <div class="flight-grid">
+      <div class="flight-card arrival">
+        <div class="flight-badge">去程 OUTBOUND</div>
+        <div class="flight-number">CI 156</div>
+        <div class="flight-route">
+          <span class="airport">TPE</span>
+          <div class="route-line"></div>
+          <span class="airport">KIX</span>
+        </div>
+        <div class="flight-times">
+          <div>
+            <div style="font-size:0.72rem;opacity:0.5;margin-bottom:2px;">出發</div>
+            <div class="flight-time-val">08:05</div>
+            <div style="font-size:0.72rem;opacity:0.5;">12月18日 (五)</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:0.72rem;opacity:0.5;margin-bottom:2px;">抵達</div>
+            <div class="flight-time-val">11:35</div>
+            <div style="font-size:0.72rem;opacity:0.5;">關西國際機場</div>
+          </div>
         </div>
       </div>
-      <div class="flight-card">
-        <div class="arrow">✈</div>
-        <div class="fc-detail">
-          <div class="fc-route">CI 173　大阪 → 桃園</div>
-          <div class="fc-time">12/28（一）　19:00 → 21:15</div>
+      <div class="flight-card departure">
+        <div class="flight-badge">回程 RETURN</div>
+        <div class="flight-number">CI 173</div>
+        <div class="flight-route">
+          <span class="airport">KIX</span>
+          <div class="route-line"></div>
+          <span class="airport">TPE</span>
         </div>
+        <div class="flight-times">
+          <div>
+            <div style="font-size:0.72rem;opacity:0.5;margin-bottom:2px;">出發</div>
+            <div class="flight-time-val">19:00</div>
+            <div style="font-size:0.72rem;opacity:0.5;">12月28日 (一)</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:0.72rem;opacity:0.5;margin-bottom:2px;">抵達</div>
+            <div class="flight-time-val">21:15</div>
+            <div style="font-size:0.72rem;opacity:0.5;">台灣桃園機場</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-icon">🚗</div>
+        <div class="info-label">交通方式</div>
+        <div class="info-value">大眾運輸為主<br>伊勢・鳥羽段建議租車</div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🌨️</div>
+        <div class="info-label">天氣</div>
+        <div class="info-value">名古屋 12月均溫<br>約 5–12°C，偶有降雪</div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">💴</div>
+        <div class="info-label">建議換匯</div>
+        <div class="info-value">每人 ¥80,000–¥100,000<br>+ 信用卡備用</div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📡</div>
+        <div class="info-label">上網</div>
+        <div class="info-value">日本 eSIM<br>或 WiFi 分享器</div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="scroll-hint">SCROLL</div>
-</div>
-
-<!-- NAV -->
-<nav class="sticky-nav">
-  <div class="nav-inner">
-    <button class="nav-btn active" onclick="scrollTo('itinerary',this)">每日行程</button>
-    <button class="nav-btn" onclick="scrollTo('budget',this)">預算明細</button>
-    <button class="nav-btn" onclick="scrollTo('tickets',this)">票券攻略</button>
-    <button class="nav-btn" onclick="scrollTo('hotels',this)">住宿推薦</button>
-    <button class="nav-btn" onclick="scrollTo('shopping',this)">購物攻略</button>
-    <button class="nav-btn" onclick="scrollTo('tips',this)">旅遊貼士</button>
-  </div>
-</nav>
-
-<div class="main">
-
-<!-- ────────── 每日行程 ────────── -->
-<div class="section" id="itinerary">
-  <div class="section-title">每日行程</div>
-  <p class="section-sub">DAILY ITINERARY　|　每天 1–2 個主要景點，輕鬆步調</p>
-
-  <div class="day-grid">
-
-    <!-- D1 -->
-    <div class="day-card d1">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div class="day-num-wrap"><div class="day-num">D1</div></div>
-        <div class="day-header-text">
-          <div class="day-date">12/18（五）</div>
-          <div class="day-title-text">抵達關西機場 → 入住京都</div>
-          <div class="day-route">KIX → JR Haruka → 京都站</div>
+<!-- TICKETS -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">🎟 票券攻略</p>
+    <h2 class="section-title">建議購買的票券</h2>
+    <p class="section-desc">事先在台灣購買可省時省錢，旺季票券要盡早！</p>
+    <div class="ticket-grid">
+      <div class="ticket-card">
+        <div class="ticket-header">
+          <div class="ticket-type">名古屋</div>
+          <div class="ticket-name">ドニチエコきっぷ<br>（週末地鐵一日券）</div>
         </div>
-        <div class="day-right">
-          <div class="day-cost-badge">¥ 3,500</div>
-          <div class="chevron">▼</div>
+        <div class="ticket-body">
+          <div class="ticket-desc">週六日、節假日限定，名古屋市營地鐵＋市巴士全線可乘。適合週末景點日。</div>
+          <div class="ticket-price">¥620 / 人</div>
         </div>
       </div>
-      <div class="day-body">
-        <div class="stop-section-label">交通</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🛬</div>
-          <div class="stop-content">
-            <div class="stop-name">關西空港 → 京都站（JR Haruka 特急）</div>
-            <div class="stop-note">約 75 分鐘直達；JR Pass 可免費搭，需提前劃指定席。抵達 11:35，通關＋提行李預計 13:00 前完成。</div>
-            <div class="tags"><span class="tag tag-jrp">JR Pass 免費</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費</div>
+      <div class="ticket-card">
+        <div class="ticket-header">
+          <div class="ticket-type">名古屋</div>
+          <div class="ticket-name">名古屋城入場券</div>
         </div>
-        <div class="stop-section-label">景點</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">🏮</div>
-          <div class="stop-content">
-            <div class="stop-name">錦市場散步（京都廚房）</div>
-            <div class="stop-note">京都最熱鬧的傳統市場，小吃、漬物、生食材應有盡有。放行李後輕鬆漫步，適合第一天感受京都氛圍。</div>
-            <div class="tags"><span class="tag tag-free">免費入場</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費</div>
-        </div>
-        <div class="stop-section-label">餐飲</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">🍱</div>
-          <div class="stop-content">
-            <div class="stop-name">晚餐：錦市場周邊食堂</div>
-            <div class="stop-note">湯豆腐定食、京都家庭料理，推薦「三木半食堂」或「麵処 にしき」，CP 值高。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥3,500</div>
+        <div class="ticket-body">
+          <div class="ticket-desc">現場購票即可，建議早上開門前抵達避免人潮。冬季開放時間 09:00–16:30。</div>
+          <div class="ticket-price">¥500 / 人</div>
         </div>
       </div>
-    </div>
-
-    <!-- D2 -->
-    <div class="day-card d2">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div class="day-num-wrap"><div class="day-num">D2</div></div>
-        <div class="day-header-text">
-          <div class="day-date">12/19（六）</div>
-          <div class="day-title-text">任天堂博物館</div>
-          <div class="day-route">京都市區 → 京阪電鐵 → 小倉站（宇治市）</div>
+      <div class="ticket-card">
+        <div class="ticket-header">
+          <div class="ticket-type">伊勢・鳥羽</div>
+          <div class="ticket-name">伊勢鳥羽みちくさきっぷ</div>
         </div>
-        <div class="day-right">
-          <div class="day-cost-badge">¥ 15,800</div>
-          <div class="chevron">▼</div>
+        <div class="ticket-body">
+          <div class="ticket-desc">近鐵名古屋↔伊勢・鳥羽的來回券，含沿線各景點折扣，超值推薦！可在近鐵窗口購買。</div>
+          <div class="ticket-price">¥3,800 / 人</div>
         </div>
       </div>
-      <div class="day-body">
-        <div class="stop-section-label">交通</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚃</div>
-          <div class="stop-content">
-            <div class="stop-name">京都 → 小倉（京阪電鐵宇治線）</div>
-            <div class="stop-note">丹波橋轉乘宇治線，約 45 分。ICOCA 刷卡，非 JR 路線，2 人往返約 ¥1,200。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥1,200</div>
+      <div class="ticket-card">
+        <div class="ticket-header">
+          <div class="ticket-type">名古屋港</div>
+          <div class="ticket-name">名古屋港水族館套票</div>
         </div>
-        <div class="stop-section-label">主要景點</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FCE4EC;">🎮</div>
-          <div class="stop-content">
-            <div class="stop-name">任天堂博物館（Nintendo Museum）</div>
-            <div class="stop-note">抽選制門票！需每月初上官網抽次月場次。12/19 需在 11 月參加抽籤。館內有皮克敏、馬利歐互動遊戲區，建議停留 3–4 小時。</div>
-            <div class="tags"><span class="tag tag-warn">⚑ 需提前線上抽票</span><span class="tag tag-shop">皮克敏紀念品</span></div>
-          </div>
-          <div class="stop-amt amt-cost">¥3,300×2</div>
+        <div class="ticket-body">
+          <div class="ticket-desc">含南館＋北館，看白鯨、虎鯨表演。建議提前網路購票避免現場排隊。</div>
+          <div class="ticket-price">¥2,030 / 人</div>
         </div>
-        <div class="stop-section-label">餐飲</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">🍵</div>
-          <div class="stop-content">
-            <div class="stop-name">午餐：宇治抹茶烏龍麵</div>
-            <div class="stop-note">辻利茶舖周邊的抹茶套餐或宇治川邊老舖蕎麥麵，宇治名物不可錯過。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,000</div>
+      </div>
+      <div class="ticket-card">
+        <div class="ticket-header">
+          <div class="ticket-type">三重</div>
+          <div class="ticket-name">鳥羽水族館入館券</div>
         </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">🛍️</div>
-          <div class="stop-content">
-            <div class="stop-name">下午：回京都市區購物</div>
-            <div class="stop-note">四条河原町 Loft、Animate 找 Chiikawa 商品；高島屋 B1 超市採購。</div>
-            <div class="tags"><span class="tag tag-shop">Chiikawa</span><span class="tag tag-shop">扭蛋</span></div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,500</div>
+        <div class="ticket-body">
+          <div class="ticket-desc">展示儒艮的稀有水族館！超過1200種生物，建議預留3小時。可網路購票。</div>
+          <div class="ticket-price">¥2,800 / 人</div>
+        </div>
+      </div>
+      <div class="ticket-card">
+        <div class="ticket-header">
+          <div class="ticket-type">御在所岳</div>
+          <div class="ticket-name">御在所ロープウェイ往復</div>
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-desc">從湯之山溫泉站到山頂，冬季可賞雪景絕美。搭近鐵至湯之山線終點站即達。</div>
+          <div class="ticket-price">¥2,800 / 人</div>
+        </div>
+      </div>
+      <div class="ticket-card">
+        <div class="ticket-header">
+          <div class="ticket-type">京都宇治</div>
+          <div class="ticket-name">任天堂博物館入場券</div>
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-desc">⚠️ 需提前抽籤，每月第15日中午12:00開放下月抽籤，務必12月中旬前搶訂！</div>
+          <div class="ticket-price">¥3,300 / 人（成人）</div>
+        </div>
+      </div>
+      <div class="ticket-card">
+        <div class="ticket-header">
+          <div class="ticket-type">津市</div>
+          <div class="ticket-name">なばなの里 入場券</div>
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-desc">名花之里 12月冬季燈會（なばなの里イルミネーション），全日本最大級燈海！建議平日前往。</div>
+          <div class="ticket-price">¥2,500 / 人（含¥1,000飲食券）</div>
         </div>
       </div>
     </div>
 
-    <!-- D3 -->
-    <div class="day-card d3">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div class="day-num-wrap"><div class="day-num">D3</div></div>
-        <div class="day-header-text">
-          <div class="day-date">12/20（日）</div>
-          <div class="day-title-text">伏見稻荷大社 → 移動至鳥羽</div>
-          <div class="day-route">京都市內 → 傍晚近鐵至鳥羽</div>
-        </div>
-        <div class="day-right">
-          <div class="day-cost-badge">¥ 8,800</div>
-          <div class="chevron">▼</div>
-        </div>
-      </div>
-      <div class="day-body">
-        <div class="stop-section-label">交通</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚃</div>
-          <div class="stop-content">
-            <div class="stop-name">京都 → JR 稻荷站（JR 奈良線）</div>
-            <div class="stop-note">京都站出發約 5 分，ICOCA 刷卡，2 人往返 ¥380。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥380</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚃</div>
-          <div class="stop-content">
-            <div class="stop-name">京都 → 鳥羽（近鐵特急）</div>
-            <div class="stop-note">從近鐵京都站搭乘しまかぜ或一般特急，約 2 小時抵達鳥羽。含乘車券＋特急指定席，2 人合計。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥5,000</div>
-        </div>
-        <div class="stop-section-label">主要景點</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">⛩️</div>
-          <div class="stop-content">
-            <div class="stop-name">伏見稻荷大社・千本鳥居</div>
-            <div class="stop-note">建議早上 7–8 時入園，冬季人潮少且光線柔和。爬至四ツ辻展望台可眺望京都全景，約需 1.5 小時。全程免費參拜。</div>
-            <div class="tags"><span class="tag tag-free">免費</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費</div>
-        </div>
-        <div class="stop-section-label">餐飲</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">🍢</div>
-          <div class="stop-content">
-            <div class="stop-name">午餐：稻荷參道茶屋（雀丸燒）</div>
-            <div class="stop-note">稻荷名物烤麻雀串或稻荷壽司，在地小茶屋品嘗，¥800–1,200/人。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,000</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">🍣</div>
-          <div class="stop-content">
-            <div class="stop-name">晚餐：鳥羽近鐵站周邊</div>
-            <div class="stop-note">抵達鳥羽後，港口附近海鮮食堂享用新鮮牡蠣定食或海鮮丼。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥1,420</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- D4 -->
-    <div class="day-card d4">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div class="day-num-wrap"><div class="day-num">D4</div></div>
-        <div class="day-header-text">
-          <div class="day-date">12/21（一）</div>
-          <div class="day-title-text">伊勢神宮 + 二見浦・夫婦岩</div>
-          <div class="day-route">鳥羽 ↔ 伊勢市　近鐵 15 分</div>
-        </div>
-        <div class="day-right">
-          <div class="day-cost-badge">¥ 5,500</div>
-          <div class="chevron">▼</div>
-        </div>
-      </div>
-      <div class="day-body">
-        <div class="stop-section-label">交通</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚃</div>
-          <div class="stop-content">
-            <div class="stop-name">鳥羽 ↔ 伊勢市（近鐵／JR）+ 市內巴士</div>
-            <div class="stop-note">外宮→內宮搭三重交通巴士（¥170/次），2 人全日交通費約 ¥1,500。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥1,500</div>
-        </div>
-        <div class="stop-section-label">主要景點</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">⛩️</div>
-          <div class="stop-content">
-            <div class="stop-name">伊勢神宮（外宮 → 內宮）</div>
-            <div class="stop-note">日本最高神宮，先外宮（豐受大神宮）再內宮（皇大神宮），冬季下午 4 點前務必完成參拜。全程免費。</div>
-            <div class="tags"><span class="tag tag-free">免費參拜</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">🌊</div>
-          <div class="stop-content">
-            <div class="stop-name">二見浦・夫婦岩（順遊）</div>
-            <div class="stop-note">距鳥羽 10 分鐘巴士，夫婦岩與冬日夕陽絕配，二見興玉神社免費參觀，青蛙石像超可愛。</div>
-            <div class="tags"><span class="tag tag-free">免費</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費</div>
-        </div>
-        <div class="stop-section-label">餐飲</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">🍜</div>
-          <div class="stop-content">
-            <div class="stop-name">午餐：おはらい町（伊勢烏龍麵 + 赤福）</div>
-            <div class="stop-note">內宮門前町必吃，伊勢烏龍麵（軟麵 + 濃醬油）¥750/人，赤福現做麻糬¥330/人。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,000</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">🦪</div>
-          <div class="stop-content">
-            <div class="stop-name">晚餐：鳥羽海鮮食堂</div>
-            <div class="stop-note">鳥羽港活牡蠣燒烤或海鮮丼，推薦「かきどころ」，冬季牡蠣最肥美。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,000</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- D5 -->
-    <div class="day-card d5">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div class="day-num-wrap"><div class="day-num">D5</div></div>
-        <div class="day-header-text">
-          <div class="day-date">12/22（二）</div>
-          <div class="day-title-text">鳥羽水族館 → 鈴鹿賽道樂園 → 名古屋</div>
-          <div class="day-route">鳥羽 → 近鐵 → 白子 → 名古屋（入住）</div>
-        </div>
-        <div class="day-right">
-          <div class="day-cost-badge">¥ 21,100</div>
-          <div class="chevron">▼</div>
-        </div>
-      </div>
-      <div class="day-body">
-        <div class="stop-section-label">交通</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚃</div>
-          <div class="stop-content">
-            <div class="stop-name">鳥羽 → 白子（近鐵）→ 鈴鹿賽道 shuttle</div>
-            <div class="stop-note">近鐵至白子約 55 分，再搭接駁巴士或計程車至鈴鹿賽道（¥700/台）。2 人交通合計。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥4,400</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚃</div>
-          <div class="stop-content">
-            <div class="stop-name">白子 → 名古屋（近鐵特急）</div>
-            <div class="stop-note">約 70 分，2 人合計含特急券。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,600</div>
-        </div>
-        <div class="stop-section-label">主要景點</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🐋</div>
-          <div class="stop-content">
-            <div class="stop-name">鳥羽水族館（09:00 – 12:00）</div>
-            <div class="stop-note">日本最大水族館，全日本唯一展示儒艮（海牛）的地方。建議開館即入場，停留 2–2.5 小時。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,800×2</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FCE4EC;">🏎️</div>
-          <div class="stop-content">
-            <div class="stop-name">鈴鹿賽道樂園（14:00 – 20:00）</div>
-            <div class="stop-note">F1 主題遊樂園，12 月有冬季點燈「光のフェスタ」，夜間燈飾絢麗。全家大小都適合。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,500×2</div>
-        </div>
-        <div class="stop-section-label">餐飲</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">🍱</div>
-          <div class="stop-content">
-            <div class="stop-name">午餐：鳥羽港附近（水族館後）</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,000</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">🍔</div>
-          <div class="stop-content">
-            <div class="stop-name">晚餐：鈴鹿樂園園內餐廳</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,600</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- D6 -->
-    <div class="day-card d6">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div class="day-num-wrap"><div class="day-num">D6</div></div>
-        <div class="day-header-text">
-          <div class="day-date">12/23（三）</div>
-          <div class="day-title-text">熱田神宮 + 名古屋城 + 大須商店街</div>
-          <div class="day-route">名古屋市內地鐵一日券</div>
-        </div>
-        <div class="day-right">
-          <div class="day-cost-badge">¥ 7,480</div>
-          <div class="chevron">▼</div>
-        </div>
-      </div>
-      <div class="day-body">
-        <div class="stop-section-label">交通</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚇</div>
-          <div class="stop-content">
-            <div class="stop-name">名古屋市地鐵一日乘車券</div>
-            <div class="stop-note">¥740/人，全日無限搭市內地鐵，熱田神宮、名古屋城、大須全都串起來。2 人合計。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥1,480</div>
-        </div>
-        <div class="stop-section-label">主要景點</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">⛩️</div>
-          <div class="stop-content">
-            <div class="stop-name">熱田神宮（+ 宮きしめん）</div>
-            <div class="stop-note">日本三大神宮之一，供奉草薙劍。境內松林清幽，免費參拜。境內宮きしめん（名古屋限定扁麵）是參拜後必吃！</div>
-            <div class="tags"><span class="tag tag-free">免費</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">🏯</div>
-          <div class="stop-content">
-            <div class="stop-name">名古屋城（本丸御殿）</div>
-            <div class="stop-note">金鯱天守閣，本丸御殿內部復原精緻華美，絕對不可錯過。冬季有「名古屋城冬まつり」點燈活動。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥500×2</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FCE4EC;">🎰</div>
-          <div class="stop-content">
-            <div class="stop-name">晚間：大須商店街</div>
-            <div class="stop-note">名古屋最大商店街，扭蛋機台密集、玩具店、Chiikawa 精品店、古著全都有，是購物天堂！</div>
-            <div class="tags"><span class="tag tag-shop">扭蛋天堂</span><span class="tag tag-shop">玩具</span><span class="tag tag-free">免費逛街</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費入場</div>
-        </div>
-        <div class="stop-section-label">餐飲</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">🍖</div>
-          <div class="stop-content">
-            <div class="stop-name">午餐：矢場とん 味噌豬排</div>
-            <div class="stop-note">名古屋めし必吃代表，本店在大須附近，¥1,200–1,600/人。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,500</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">🍜</div>
-          <div class="stop-content">
-            <div class="stop-name">晚餐：山本屋本店 味噌煮込烏龍麵</div>
-            <div class="stop-note">名古屋另一必吃，味噌煮込烏龍麵質感獨特，¥1,300/人。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥3,000</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- D7 -->
-    <div class="day-card d7">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div class="day-num-wrap"><div class="day-num">D7</div></div>
-        <div class="day-header-text">
-          <div class="day-date">12/24（四）🎄 聖誕夜</div>
-          <div class="day-title-text">磁浮鐵道館 → 名古屋港水族館 → 綠洲21</div>
-          <div class="day-route">名古屋市內地鐵一日券 + 聖誕夜點燈</div>
-        </div>
-        <div class="day-right">
-          <div class="day-cost-badge">¥ 12,560</div>
-          <div class="chevron">▼</div>
-        </div>
-      </div>
-      <div class="day-body">
-        <div class="stop-section-label">交通</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚇</div>
-          <div class="stop-content">
-            <div class="stop-name">名古屋市地鐵一日乘車券</div>
-            <div class="stop-note">可乘市地鐵全線，金城ふ頭（鐵道館）→名古屋港→榮（綠洲21）一票到底，2人合計。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥1,480</div>
-        </div>
-        <div class="stop-section-label">主要景點</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚄</div>
-          <div class="stop-content">
-            <div class="stop-name">磁浮鐵道館（リニア・鉄道館）09:00–12:00</div>
-            <div class="stop-note">JR 東海旗艦博物館，展示新幹線與磁浮列車實體車廂，超大模型鐵道場景，鐵道迷必訪！建議開館即去。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥1,000×2</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🐋</div>
-          <div class="stop-content">
-            <div class="stop-name">名古屋港水族館　13:00–17:00</div>
-            <div class="stop-note">日本最大水族館之一，白鯨、虎鯨（殺手鯨）、海豚表演，2 館合票最划算。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,030×2</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FCE4EC;">🎄</div>
-          <div class="stop-content">
-            <div class="stop-name">綠洲 21（Oasis 21）聖誕夜點燈　18:00–</div>
-            <div class="stop-note">名古屋地標「銀河廣場」水上玻璃屋頂搭配聖誕燈飾，是聖誕夜最美打卡點。周邊久屋大通商圈可享聖誕晚餐。</div>
-            <div class="tags"><span class="tag tag-free">免費觀賞</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費</div>
-        </div>
-        <div class="stop-section-label">餐飲</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">🍱</div>
-          <div class="stop-content">
-            <div class="stop-name">午餐：金城ふ頭附近（鐵道館旁）</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,000</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FCE4EC;">🍽️</div>
-          <div class="stop-content">
-            <div class="stop-name">聖誕晚餐：久屋大通商圈</div>
-            <div class="stop-note">綠洲21 旁餐廳林立，聖誕夜浪漫氛圍。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥4,050</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- D8 -->
-    <div class="day-card d8">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div class="day-num-wrap"><div class="day-num">D8</div></div>
-        <div class="day-header-text">
-          <div class="day-date">12/25（五）🎅 聖誕節</div>
-          <div class="day-title-text">御在所岳纜車 → 名花之里冬季點燈</div>
-          <div class="day-route">名古屋 → 近鐵 → 湯の山温泉 → 桑名 → 名古屋</div>
-        </div>
-        <div class="day-right">
-          <div class="day-cost-badge">¥ 20,900</div>
-          <div class="chevron">▼</div>
-        </div>
-      </div>
-      <div class="day-body">
-        <div class="stop-section-label">交通</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚃</div>
-          <div class="stop-content">
-            <div class="stop-name">名古屋 → 湯の山温泉（近鐵）+ 計程車</div>
-            <div class="stop-note">名古屋→近鐵四日市約30分，轉湯の山線約15分。計程車至纜車站¥1,500/台，2人合計交通費。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥4,400</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚃</div>
-          <div class="stop-content">
-            <div class="stop-name">近鐵桑名站 → 名花之里（免費接駁巴士）</div>
-            <div class="stop-note">名花之里有免費接駁巴士（從近鐵桑名站），返回近鐵桑名後搭回名古屋約45分。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥1,800</div>
-        </div>
-        <div class="stop-section-label">主要景點</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">⛰️</div>
-          <div class="stop-content">
-            <div class="stop-name">御在所岳空中纜車（09:00 – 13:00）</div>
-            <div class="stop-note">日本最長空中纜車，12 月可賞樹冰雪景，登頂後在山頂展望台飽覽伊勢灣。出發前確認纜車當日運行狀況。</div>
-            <div class="tags"><span class="tag tag-warn">⚑ 確認當日運行狀況</span></div>
-          </div>
-          <div class="stop-amt amt-cost">¥3,000×2</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FCE4EC;">🌈</div>
-          <div class="stop-content">
-            <div class="stop-name">名花之里（なばなの里）冬季點燈　17:00–21:00</div>
-            <div class="stop-note">日本規模最大冬季燈飾活動，每年主題不同，LED 瀑布隧道震撼人心。聖誕節當晚必訪！門票含 ¥1,000 園內消費券。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,300×2</div>
-        </div>
-        <div class="stop-section-label">餐飲</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">🍜</div>
-          <div class="stop-content">
-            <div class="stop-name">午餐：御在所山頂レストラン</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,600</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FCE4EC;">🥩</div>
-          <div class="stop-content">
-            <div class="stop-name">晚餐：名花之里園內餐廳</div>
-            <div class="stop-note">園內多家餐廳，BBQ 或牛排，且¥1,000 消費券可直接抵用。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,800</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- D9 -->
-    <div class="day-card d9">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div class="day-num-wrap"><div class="day-num">D9</div></div>
-        <div class="day-header-text">
-          <div class="day-date">12/26（六）</div>
-          <div class="day-title-text">名古屋 → 大阪難波・心齋橋購物</div>
-          <div class="day-route">JR 新幹線 Hikari → 新大阪 → 難波</div>
-        </div>
-        <div class="day-right">
-          <div class="day-cost-badge">¥ 9,200</div>
-          <div class="chevron">▼</div>
-        </div>
-      </div>
-      <div class="day-body">
-        <div class="stop-section-label">交通</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚅</div>
-          <div class="stop-content">
-            <div class="stop-name">名古屋 → 新大阪（JR 新幹線 Hikari）</div>
-            <div class="stop-note">約 50 分，JR Pass 可搭 Hikari（不可搭 Nozomi）。建議 9:00–10:00 出發，保留下午購物時間。</div>
-            <div class="tags"><span class="tag tag-jrp">JR Pass 免費</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚇</div>
-          <div class="stop-content">
-            <div class="stop-name">新大阪 → 難波（地鐵御堂筋線）</div>
-            <div class="stop-note">約 20 分，ICOCA 刷卡，2 人合計。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥700</div>
-        </div>
-        <div class="stop-section-label">景點・購物</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FCE4EC;">🐭</div>
-          <div class="stop-content">
-            <div class="stop-name">心齋橋・Chiikawa Land 大阪</div>
-            <div class="stop-note">Chiikawa Land 在心齋橋大丸百貨，週末可能排隊，下午 13:00–14:00 前往。周邊心齋橋筋商店街、Big Step 可逛。</div>
-            <div class="tags"><span class="tag tag-shop">Chiikawa 限定</span><span class="tag tag-warn">週末排隊</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費入場</div>
-        </div>
-        <div class="stop-section-label">餐飲</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">🍱</div>
-          <div class="stop-content">
-            <div class="stop-name">午餐：名古屋站名物便當（新幹線上）</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,000</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">🐙</div>
-          <div class="stop-content">
-            <div class="stop-name">晚餐：道頓堀（章魚燒・大阪燒・551 蓬萊）</div>
-            <div class="stop-note">大阪必吃全制霸：くくる章魚燒、鶴橋風月大阪燒、551蓬萊豬肉包，道頓堀夜景同步欣賞。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥3,000</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- D10 -->
-    <div class="day-card d10">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div class="day-num-wrap"><div class="day-num">D10</div></div>
-        <div class="day-header-text">
-          <div class="day-date">12/27（日）</div>
-          <div class="day-title-text">Nintendo OSAKA + Chiikawa Land + 扭蛋衝刺</div>
-          <div class="day-route">難波 ↔ 梅田　地鐵御堂筋線</div>
-        </div>
-        <div class="day-right">
-          <div class="day-cost-badge">¥ 7,200</div>
-          <div class="chevron">▼</div>
-        </div>
-      </div>
-      <div class="day-body">
-        <div class="stop-section-label">交通</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">🚇</div>
-          <div class="stop-content">
-            <div class="stop-name">難波 ↔ 梅田（地鐵御堂筋線）</div>
-            <div class="stop-note">約 10 分，2 人往返 ¥700。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥700</div>
-        </div>
-        <div class="stop-section-label">景點・購物</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FCE4EC;">🎮</div>
-          <div class="stop-content">
-            <div class="stop-name">Nintendo OSAKA（梅田大丸 13F）</div>
-            <div class="stop-note">任天堂官方旗艦店，皮克敏、馬利歐、薩爾達限定商品齊全。週日 10:00 開店即衝，可能需排隊入場，先搶再說！</div>
-            <div class="tags"><span class="tag tag-shop">皮克敏</span><span class="tag tag-shop">任天堂限定</span><span class="tag tag-warn">10:00開店即衝</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費入場</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FCE4EC;">🐭</div>
-          <div class="stop-content">
-            <div class="stop-name">Chiikawa Land 大阪（心齋橋大丸）</div>
-            <div class="stop-note">再去一次！補齊昨天沒買到的商品，下午 13:00 前往，排隊人潮稍少。</div>
-            <div class="tags"><span class="tag tag-shop">Chiikawa 限定</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費入場</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">🎰</div>
-          <div class="stop-content">
-            <div class="stop-name">難波 Gacha Gacha No Mise（800+ 台）</div>
-            <div class="stop-note">心齋橋最大扭蛋專賣店，800+ 機台任君挑選！旁邊 Don Quijote 超市大採購伴手禮。</div>
-            <div class="tags"><span class="tag tag-shop">扭蛋 800 台</span><span class="tag tag-shop">超市採購</span></div>
-          </div>
-          <div class="stop-amt amt-free">免費入場</div>
-        </div>
-        <div class="stop-section-label">餐飲</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">🍜</div>
-          <div class="stop-content">
-            <div class="stop-name">午餐：梅田地下街（Whity Umeda）</div>
-            <div class="stop-note">選擇極多，拉麵、定食、壽司通通有，¥1,000–1,500/人。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,500</div>
-        </div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">🥢</div>
-          <div class="stop-content">
-            <div class="stop-name">晚餐：難波串炸・鶴橋風月大阪燒</div>
-          </div>
-          <div class="stop-amt amt-cost">¥4,000</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- D11 -->
-    <div class="day-card d11">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div class="day-num-wrap"><div class="day-num">D11</div></div>
-        <div class="day-header-text">
-          <div class="day-date">12/28（一）</div>
-          <div class="day-title-text">回家日 → 關西機場</div>
-          <div class="day-route">難波 → 南海ラピート → KIX　CI173 19:00</div>
-        </div>
-        <div class="day-right">
-          <div class="day-cost-badge">¥ 5,500</div>
-          <div class="chevron">▼</div>
-        </div>
-      </div>
-      <div class="day-body">
-        <div class="stop-section-label">交通</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E3F2FD;">✈️</div>
-          <div class="stop-content">
-            <div class="stop-name">難波 → 關西機場（南海ラピート特急）</div>
-            <div class="stop-note">約 40 分，CI173 起飛 19:00，建議 14:30 從難波出發，15:10 抵達機場，留足 check-in 與免稅採購時間。2 人合計。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥3,500</div>
-        </div>
-        <div class="stop-section-label">最後行程</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#FFF8E1;">💊</div>
-          <div class="stop-content">
-            <div class="stop-name">早上：難波藥妝最後掃貨</div>
-            <div class="stop-note">Matsumoto Kiyoshi、Welcia、Don Quijote，早上 10:00–13:00 做最後採購，退稅記得帶護照！</div>
-          </div>
-          <div class="stop-amt amt-free">免費</div>
-        </div>
-        <div class="stop-section-label">餐飲</div>
-        <div class="stop">
-          <div class="stop-icon" style="background:#E8F5E9;">🍱</div>
-          <div class="stop-content">
-            <div class="stop-name">午餐：難波最後一頓大阪美食</div>
-            <div class="stop-note">推薦難波「今井」天婦羅蕎麥麵或「自由軒」名物咖哩飯，告別大阪。</div>
-          </div>
-          <div class="stop-amt amt-cost">¥2,000</div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /day-grid -->
-</div>
-
-<!-- ────────── 預算明細 ────────── -->
-<div class="section" id="budget">
-  <div class="section-title">預算明細</div>
-  <p class="section-sub">BUDGET BREAKDOWN　|　2 人合計，不含機票與購物費用</p>
-
-  <div class="budget-section">
-    <div class="budget-header">
-      <h2>旅費試算（2人）</h2>
-      <p>全程大眾交通　|　舒適型住宿 ¥15,000–18,000/晚　|　一般餐飲 ¥3,000–5,000/天</p>
-    </div>
-
-    <div class="budget-total-strip">
-      <div class="btotal-item">
-        <div class="btotal-label">交通費</div>
-        <div class="btotal-value">¥66,480</div>
-        <div class="btotal-sub">JR Pass + 近鐵 + 地鐵</div>
-      </div>
-      <div class="btotal-item">
-        <div class="btotal-label">住宿費（10晚）</div>
-        <div class="btotal-value">¥163,000</div>
-        <div class="btotal-sub">平均 ¥16,300/晚</div>
-      </div>
-      <div class="btotal-item">
-        <div class="btotal-label">景點門票</div>
-        <div class="btotal-value">¥34,860</div>
-        <div class="btotal-sub">8 處景點（2人合計）</div>
-      </div>
-      <div class="btotal-item">
-        <div class="btotal-label">餐飲費</div>
-        <div class="btotal-value">¥68,200</div>
-        <div class="btotal-sub">三餐 × 11天（2人）</div>
-      </div>
-    </div>
-
-    <div class="budget-breakdown">
-      <table class="budget-table">
-        <thead>
-          <tr><th>項目</th><th>說明</th><th>¥ 金額</th></tr>
-        </thead>
-        <tbody>
-
-          <tr class="cat-row"><td colspan="3">── 交通費 ──</td></tr>
-          <tr><td>JR 關西廣域周遊券（5日）</td><td>2人 × ¥12,000｜關西機場 Haruka + 新幹線 Hikari</td><td>¥24,000</td></tr>
-          <tr><td>近鐵特急乘車券</td><td>京都→鳥羽＋三重段多段｜2人合計</td><td>¥13,400</td></tr>
-          <tr><td>南海ラピート（回程機場）</td><td>難波→KIX，2人</td><td>¥3,500</td></tr>
-          <tr><td>大阪・名古屋市內地鐵</td><td>ICOCA 儲值＋地鐵一日券（2天×2人）</td><td>¥20,000</td></tr>
-          <tr><td>計程車（御在所岳）</td><td>湯の山温泉站→纜車站，來回</td><td>¥3,000</td></tr>
-          <tr><td>雜項巴士費</td><td>伊勢市內巴士、名花之里接駁等</td><td>¥2,580</td></tr>
-          <tr class="subtotal"><td colspan="2">交通費 小計</td><td>¥66,480</td></tr>
-
-          <tr class="cat-row"><td colspan="3">── 住宿費（10晚 / 2人）──</td></tr>
-          <tr><td>京都 3晚</td><td>JR 京都站共構或步行 5 分｜¥16,000/晚</td><td>¥48,000</td></tr>
-          <tr><td>鳥羽 1晚</td><td>近鐵鳥羽站步行 5 分內｜¥15,000/晚</td><td>¥15,000</td></tr>
-          <tr><td>名古屋 4晚</td><td>JR 名古屋站直結或步行 3 分｜¥17,000/晚</td><td>¥68,000</td></tr>
-          <tr><td>大阪難波 2晚</td><td>難波站步行 5 分內｜¥16,000/晚</td><td>¥32,000</td></tr>
-          <tr class="subtotal"><td colspan="2">住宿費 小計</td><td>¥163,000</td></tr>
-
-          <tr class="cat-row"><td colspan="3">── 景點門票（2人）──</td></tr>
-          <tr><td>任天堂博物館</td><td>¥3,300 × 2</td><td>¥6,600</td></tr>
-          <tr><td>鳥羽水族館</td><td>¥2,800 × 2</td><td>¥5,600</td></tr>
-          <tr><td>鈴鹿賽道樂園</td><td>¥2,500 × 2</td><td>¥5,000</td></tr>
-          <tr><td>名古屋城</td><td>¥500 × 2</td><td>¥1,000</td></tr>
-          <tr><td>磁浮鐵道館</td><td>¥1,000 × 2</td><td>¥2,000</td></tr>
-          <tr><td>名古屋港水族館</td><td>¥2,030 × 2</td><td>¥4,060</td></tr>
-          <tr><td>御在所岳纜車（來回）</td><td>¥3,000 × 2</td><td>¥6,000</td></tr>
-          <tr><td>名花之里點燈</td><td>¥2,300 × 2（含 ¥1,000 消費券）</td><td>¥4,600</td></tr>
-          <tr class="note-row"><td colspan="3">※ 伏見稻荷、伊勢神宮、熱田神宮、二見浦、綠洲21 全部免費</td></tr>
-          <tr class="subtotal"><td colspan="2">景點門票 小計</td><td>¥34,860</td></tr>
-
-          <tr class="cat-row"><td colspan="3">── 餐飲費（2人 × 11天）──</td></tr>
-          <tr><td>早餐</td><td>便利商店或飯店附餐｜¥800/天 × 11</td><td>¥8,800</td></tr>
-          <tr><td>午餐</td><td>平均 ¥1,200/人 × 2 × 11</td><td>¥26,400</td></tr>
-          <tr><td>晚餐</td><td>平均 ¥1,500/人 × 2 × 11</td><td>¥33,000</td></tr>
-          <tr class="subtotal"><td colspan="2">餐飲費 小計</td><td>¥68,200</td></tr>
-
-          <tr class="cat-row"><td colspan="3">── 雜費 ──</td></tr>
-          <tr><td>日本 eSIM / 網卡</td><td>台灣出發前購買 10 日 eSIM</td><td>¥1,500</td></tr>
-
-          <tr class="grand">
-            <td colspan="2">總計（2人，不含機票＆購物）</td>
-            <td>¥334,040</td>
-          </tr>
-          <tr class="grand">
-            <td colspan="2">折合台幣（匯率 0.22）</td>
-            <td>≈ NT$73,489</td>
-          </tr>
-          <tr class="grand">
-            <td colspan="2">每人平均</td>
-            <td>≈ NT$36,745</td>
-          </tr>
-        </tbody>
-      </table>
-      <p style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:16px;line-height:1.8;">
-        ※ 匯率以 1¥ ≈ NT$0.22 估算，實際依當日匯率為準。<br>
-        ※ 購物費用（Chiikawa、任天堂、扭蛋、超市伴手禮）依個人消費習慣，未列入。<br>
-        ※ 旅遊保險建議另行購買，未列入預算。
-      </p>
+    <div class="highlight-box">
+      <p>🚗 <strong>租車建議：</strong>伊勢神宮 → 托福橫丁 → 鳥羽水族館 → 御在所岳 這段行程，景點分散，<strong>強烈建議在伊勢市或近鐵宇治山田站附近租車</strong>，使用 1–2 天後還車至名古屋，方便且省時。預算約 ¥8,000–¥12,000（2日）。台灣駕照需配合國際駕照。</p>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ────────── 票券攻略 ────────── -->
-<div class="section" id="tickets">
-  <div class="section-title">票券攻略</div>
-  <p class="section-sub">TICKET GUIDE　|　出發前準備清單</p>
+<!-- ITINERARY -->
+<div class="days-container">
+  <div class="container-wide">
+    <p class="section-label">📅 每日行程</p>
+    <h2 class="section-title" style="margin-bottom:0.5rem;">11日完整規劃</h2>
+    <p style="color:rgba(26,26,46,0.55);font-size:0.9rem;margin-bottom:2rem;">點選日期切換，步調輕鬆，每天1–2個主要景點</p>
 
-  <div class="ticket-grid">
-    <div class="ticket-card">
-      <div>
-        <div class="ticket-name"><span class="badge-important">最重要</span>JR 關西廣域鐵路周遊券（5日）</div>
-        <div class="ticket-note">
-          涵蓋範圍：關西機場 Haruka 直達京都 ＋ 京都↔名古屋新幹線 Hikari。<br>
-          建議 D1（12/18）啟用，用至 D5（12/22）。<br>
-          ⚡ 台灣出發前向旅行社或 JR 官網購買，比日本當地便宜約 10%。<br>
-          搭 Hikari 需劃指定席，Nozomi 不可用此 Pass！
+    <div class="days-nav">
+      <button class="day-nav-btn active" onclick="showDay(1, this)">Day 1</button>
+      <button class="day-nav-btn" onclick="showDay(2, this)">Day 2</button>
+      <button class="day-nav-btn" onclick="showDay(3, this)">Day 3</button>
+      <button class="day-nav-btn" onclick="showDay(4, this)">Day 4</button>
+      <button class="day-nav-btn" onclick="showDay(5, this)">Day 5</button>
+      <button class="day-nav-btn" onclick="showDay(6, this)">Day 6</button>
+      <button class="day-nav-btn" onclick="showDay(7, this)">Day 7</button>
+      <button class="day-nav-btn" onclick="showDay(8, this)">Day 8</button>
+      <button class="day-nav-btn" onclick="showDay(9, this)">Day 9</button>
+      <button class="day-nav-btn" onclick="showDay(10, this)">Day 10</button>
+      <button class="day-nav-btn" onclick="showDay(11, this)">Day 11</button>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="day-block visible" id="day-1">
+      <div class="day-header">
+        <div class="day-num" style="background:#1A1A2E;">
+          <span class="num">01</span>
+          <span class="label">DAY</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12月18日 (五)</div>
+          <div class="day-title">抵達關西 → 名古屋</div>
+          <div class="day-subtitle">安頓住所，輕鬆開啟旅程</div>
         </div>
       </div>
-      <div>
-        <div class="ticket-price">¥12,000</div>
-        <div class="ticket-per">/ 人</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot transport"><div class="dot-inner"></div></div>
+          <div class="timeline-time">11:35</div>
+          <div class="timeline-content">
+            <div class="timeline-title">✈ 抵達關西國際機場 (KIX)</div>
+            <div class="timeline-desc">辦理入境、取行李、購買 ICOCA 卡（¥2,000，含¥500押金，全關西西日本地鐵通用）</div>
+            <div class="timeline-tags"><span class="tag transport">交通</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot transport"><div class="dot-inner"></div></div>
+          <div class="timeline-time">13:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🚅 KIX → 名古屋</div>
+            <div class="timeline-desc">搭乘 JR 特急 はるか + 新幹線，或近鐵 アーバンライナー 直達名古屋（約2.5小時）。近鐵方案較省錢約¥3,850。</div>
+            <div class="timeline-tags"><span class="tag transport">近鐵特急</span><span class="tag note">約¥3,850/人</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">16:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🏨 入住飯店，放置行李</div>
+            <div class="timeline-desc">推薦住名古屋站徒步圈，步行即達各大景點及百貨</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">17:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🌃 綠洲 21（オアシス21）</div>
+            <div class="timeline-desc">飯後散步「水の宇宙船」夜景，冬季有聖誕燈飾超美！地下有超市 Apita 可購買零食伴手禮</div>
+            <div class="timeline-tags"><span class="tag spot">地標</span><span class="tag shop">超市</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍜 晚餐：台灣まぜそば 発祥 麺屋はなび</div>
+            <div class="timeline-desc">名古屋最知名的台灣拌麵（台灣まぜそば）創始店，排隊必吃。推薦辣台灣まぜそば加溫泉蛋</div>
+            <div class="timeline-tags"><span class="tag food">必吃</span><span class="tag note">¥800–¥1,200</span></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="ticket-card">
-      <div>
-        <div class="ticket-name"><span class="badge-jrp">IC 卡</span>ICOCA 交通 IC 卡</div>
-        <div class="ticket-note">
-          關西地鐵、近鐵（非特急部分）、公車、便利商店、超市皆可用。<br>
-          關西機場入境後立即購買（或台灣出發前購買），押金 ¥500 + 建議初次儲值 ¥5,000。<br>
-          ICOCA 也可在名古屋・大阪地鐵使用，全程一卡通。
+    <!-- DAY 2 -->
+    <div class="day-block" id="day-2">
+      <div class="day-header">
+        <div class="day-num" style="background:#2D2D4E;">
+          <span class="num">02</span>
+          <span class="label">DAY</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12月19日 (六)</div>
+          <div class="day-title">名古屋港水族館 ＋ 大須商店街</div>
+          <div class="day-subtitle">白鯨 × 扭蛋天堂</div>
         </div>
       </div>
-      <div>
-        <div class="ticket-price">¥500</div>
-        <div class="ticket-per">押金 / 人</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">08:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">☕ 早餐：コメダ珈琲（コメダ珈琲店 名古屋駅前店）</div>
+            <div class="timeline-desc">名古屋在地咖啡連鎖，早上11點前点咖啡免費附吐司，超高 CP！名古屋早餐文化體驗</div>
+            <div class="timeline-tags"><span class="tag food">在地早餐</span><span class="tag note">約¥500</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">09:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🐳 名古屋港水族館</div>
+            <div class="timeline-desc">搭地鐵名港線至名古屋港站，步行5分鐘。白鯨館、虎鯨表演（請查詢當日時間）、企鵝館。建議待2.5–3小時</div>
+            <div class="timeline-tags"><span class="tag spot">水族館</span><span class="tag note">¥2,030</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">13:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍱 午餐：港區周邊定食</div>
+            <div class="timeline-desc">水族館附近「海辺の台所」，或回市區覓食。推薦名古屋定食 or 迴轉壽司スシロー</div>
+            <div class="timeline-tags"><span class="tag food">午餐</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot shopping"><div class="dot-inner"></div></div>
+          <div class="timeline-time">15:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🛍️ 大須商店街</div>
+            <div class="timeline-desc">搭地鐵至上前津站。名古屋最大傳統＋潮流商店街，扭蛋、玩具、電器、古著、零食一次買齊！<br>重點攻略：<br>・スーパーポテト（復古遊戲/玩具）<br>・バンダイナムコ扭蛋塔（多層扭蛋賣場）<br>・ドン・キホーテ（Donki）<br>・大須万松寺（商街中的寺廟）</div>
+            <div class="timeline-tags"><span class="tag shop">扭蛋</span><span class="tag shop">玩具</span><span class="tag spot">商店街</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🐔 晚餐：世界の山ちゃん（手羽先唐揚）</div>
+            <div class="timeline-desc">名古屋必吃風味手羽先！辛辣甜香的炸雞翅，配生啤超搭。大須附近有多間分店</div>
+            <div class="timeline-tags"><span class="tag food">名古屋名物</span><span class="tag note">¥1,500–¥2,000</span></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="ticket-card">
-      <div>
-        <div class="ticket-name">近鐵特急指定席券</div>
-        <div class="ticket-note">
-          使用時機：D3 京都→鳥羽、D5 鳥羽→白子（鈴鹿）、D8 名古屋→湯の山温泉。<br>
-          乘車券 + 特急指定席券需分開購買，特急券約 ¥900/段。<br>
-          💡 しまかぜ（豪華觀光特急）需提前預訂，搭乘體驗極佳，強烈推薦 D3 段使用！
+    <!-- DAY 3 -->
+    <div class="day-block" id="day-3">
+      <div class="day-header">
+        <div class="day-num" style="background:#3D5940;">
+          <span class="num">03</span>
+          <span class="label">DAY</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12月20日 (日)</div>
+          <div class="day-title">名古屋城 ＋ 磁浮鐵道館</div>
+          <div class="day-subtitle">歷史與科技的一天</div>
         </div>
       </div>
-      <div>
-        <div class="ticket-price">¥900~</div>
-        <div class="ticket-per">特急券 / 段 / 人</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">08:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">☕ 早餐：あんトースト文化</div>
+            <div class="timeline-desc">前往珈琲所コメダ，體驗紅豆奶油厚片吐司，名古屋早餐必吃第二彈</div>
+            <div class="timeline-tags"><span class="tag food">在地早餐</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">09:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🏯 名古屋城</div>
+            <div class="timeline-desc">搭地鐵名城線「市役所」站。木造本丸御殿重現完整，金鯱天守閣。冬日人少氛圍極佳，建議遊覽2小時</div>
+            <div class="timeline-tags"><span class="tag spot">世界遺產</span><span class="tag note">¥500</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">12:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍱 午餐：矢場とん（名古屋味噌豬排）</div>
+            <div class="timeline-desc">名古屋三大名物之一，赤味噌豬排定食，配白飯超滿足。本店在大須，城附近也有分店</div>
+            <div class="timeline-tags"><span class="tag food">名古屋名物</span><span class="tag note">¥1,200–¥1,800</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">14:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🚄 リニア・鉄道館（磁浮鐵道館）</div>
+            <div class="timeline-desc">搭 あおなみ線 至金城ふ頭站。展示超導磁浮車、新幹線歷代列車，有鐵路模型和駕駛模擬體驗，玩具控必逛！</div>
+            <div class="timeline-tags"><span class="tag spot">博物館</span><span class="tag note">¥1,000</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot shopping"><div class="dot-inner"></div></div>
+          <div class="timeline-time">17:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🛍️ JR名古屋駅 ＆ タカシマヤ ゲートタワーモール</div>
+            <div class="timeline-desc">回名古屋站逛高島屋、松坂屋地下食品館，採購伴手禮，也可逛 LOFT 找扭蛋周邊</div>
+            <div class="timeline-tags"><span class="tag shop">百貨</span><span class="tag shop">伴手禮</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍣 晚餐：寿司 or 居酒屋</div>
+            <div class="timeline-desc">名古屋站周邊「大将」居酒屋，或平價迴轉壽司，輕鬆晚餐</div>
+            <div class="timeline-tags"><span class="tag food">晚餐</span></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="ticket-card">
-      <div>
-        <div class="ticket-name">名古屋市地鐵一日乘車券</div>
-        <div class="ticket-note">
-          D6（12/23）和 D7（12/24）各買一張，可無限搭市內地鐵全線。<br>
-          串連熱田神宮、名古屋城、大須、金城ふ頭（磁浮館）、名古屋港、榮（綠洲21）一票通。<br>
-          地鐵站內自動售票機購買即可。
+    <!-- DAY 4 -->
+    <div class="day-block" id="day-4">
+      <div class="day-header">
+        <div class="day-num" style="background:#5B4A8A;">
+          <span class="num">04</span>
+          <span class="label">DAY</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12月21日 (一)</div>
+          <div class="day-title">ちいかわ聖地巡禮 Day 🐾</div>
+          <div class="day-subtitle">ちいかわもぐもぐ本舗 ＋ ナガノマーケット ＋ Chiikawa Land</div>
         </div>
       </div>
-      <div>
-        <div class="ticket-price">¥740</div>
-        <div class="ticket-per">/ 人 / 天</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">10:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🐾 ちいかわもぐもぐ本舗（名古屋店）</div>
+            <div class="timeline-desc">名古屋近鐵百貨或商場內，販售 Chiikawa 限定食品、原創商品，限定點心必搶！注意開店時間，假日常有排隊</div>
+            <div class="timeline-tags"><span class="tag chiikawa">ちいかわ</span><span class="tag shop">限定商品</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot shopping"><div class="dot-inner"></div></div>
+          <div class="timeline-time">11:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🐾 ナガノマーケット（名古屋）</div>
+            <div class="timeline-desc">長野作家 Nagano 的角色周邊實體店，クマ（熊）系列商品超可愛，與 Chiikawa 迷高度重疊，值得一逛</div>
+            <div class="timeline-tags"><span class="tag chiikawa">ナガノ</span><span class="tag shop">周邊</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">12:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍜 午餐：きしめん（名古屋扁麵）</div>
+            <div class="timeline-desc">熱田神宮境內「宮きしめん」，在地老舖，薄扁麵條湯頭鮮美，是神宮必吃的體驗</div>
+            <div class="timeline-tags"><span class="tag food">在地名物</span><span class="tag note">¥850</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">13:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">⛩️ 熱田神宮（順訪）</div>
+            <div class="timeline-desc">供奉日本三神器之一「草薙剣」的神社，境內古木蒼翠莊嚴，冬季靜謐祥和，散步30–45分鐘即可</div>
+            <div class="timeline-tags"><span class="tag spot">神社</span><span class="tag note">免費</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot shopping"><div class="dot-inner"></div></div>
+          <div class="timeline-time">15:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🐾 Chiikawa Land（名古屋）</div>
+            <div class="timeline-desc">Chiikawa 官方旗艦店，設有主題空間、獨家限定商品、扭蛋機！名古屋店位於 JR 名古屋駅 高島屋附近，建議保留1.5小時血拼</div>
+            <div class="timeline-tags"><span class="tag chiikawa">ちいかわ</span><span class="tag shop">官方旗艦</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot shopping"><div class="dot-inner"></div></div>
+          <div class="timeline-time">17:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍡 ちいかわ焼き（台所）</div>
+            <div class="timeline-desc">Chiikawa 造型人形燒！烤出可愛臉型，買來當場吃超療癒。各地限定口味不同，名古屋版是必拍體驗</div>
+            <div class="timeline-tags"><span class="tag chiikawa">限定甜點</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍲 晚餐：ひつまぶし（鰻魚飯）</div>
+            <div class="timeline-desc">名古屋最高級名物，推薦「あつた蓬莱軒」（熱田本店），或平價版「まるや」，三吃吃法超有趣！建議訂位</div>
+            <div class="timeline-tags"><span class="tag food">名古屋三大名物</span><span class="tag note">¥3,500–¥5,000</span></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="ticket-card">
-      <div>
-        <div class="ticket-name">南海電鐵 ラピート 特急（回程機場）</div>
-        <div class="ticket-note">
-          難波→關西機場約 40 分，速度快且座位舒適。<br>
-          CI173 起飛 19:00，建議 14:30 從難波南海難波站出發，15:10 抵達機場。<br>
-          留足 check-in、安全檢查和免稅採購時間。
+    <!-- DAY 5 -->
+    <div class="day-block" id="day-5">
+      <div class="day-header">
+        <div class="day-num" style="background:#B87820;">
+          <span class="num">05</span>
+          <span class="label">DAY</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12月22日 (二)</div>
+          <div class="day-title">名花之里（冬季燈會）</div>
+          <div class="day-subtitle">全日本最大級イルミネーション</div>
         </div>
       </div>
-      <div>
-        <div class="ticket-price">¥1,750</div>
-        <div class="ticket-per">/ 人</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">10:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🌸 なばなの里（名花之里）日間逛園</div>
+            <div class="timeline-desc">搭近鐵至桑名站轉 三岐鉄道 北勢線 至 星川站，有接駁巴士。白天先逛花卉溫室、義大利廣場、河津櫻展</div>
+            <div class="timeline-tags"><span class="tag spot">主題樂園</span><span class="tag note">¥2,500含飲食券</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">12:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍽️ 午餐：園區內義大利餐廳</div>
+            <div class="timeline-desc">使用票券附贈的 ¥1,000 飲食券，享用園內義式料理或甜點，物超所值</div>
+            <div class="timeline-tags"><span class="tag food">午餐</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">16:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🌟 日落後燈海開幕</div>
+            <div class="timeline-desc">12月冬至前後日落約16:30，燈會隨即開始！「光のトンネル」長達200m，花卉燈海廣達3ha，是12月最夢幻的景色</div>
+            <div class="timeline-tags"><span class="tag spot">燈會</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">19:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍜 晚餐：返回名古屋</div>
+            <div class="timeline-desc">回名古屋後，輕鬆晚餐，推薦「山本屋総本家」味噌煮込みうどん，名古屋赤味噌文化的代表</div>
+            <div class="timeline-tags"><span class="tag food">名古屋名物</span><span class="tag note">¥1,200</span></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="ticket-card" style="border-color: rgba(192,57,43,0.3);">
-      <div>
-        <div class="ticket-name"><span class="badge-important">行前必辦</span>任天堂博物館（抽選制）</div>
-        <div class="ticket-note">
-          每月初開放次月場次抽籤，12/19 場次須在 11 月參加。<br>
-          官網：museum.nintendo.com　|　1次可抽 2 人票。<br>
-          ⚠️ 若未中籤，D2 行程可改為京都市區逛街（錦市場・祇園・嵐山）或調換至其他景點。
+    <!-- DAY 6 -->
+    <div class="day-block" id="day-6">
+      <div class="day-header">
+        <div class="day-num" style="background:#0F6E56;">
+          <span class="num">06</span>
+          <span class="label">DAY</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12月23日 (三)</div>
+          <div class="day-title">伊勢神宮 ＋ おかげ横丁</div>
+          <div class="day-subtitle">日本最神聖的神社參拜</div>
         </div>
       </div>
-      <div>
-        <div class="ticket-price">¥3,300</div>
-        <div class="ticket-per">/ 人</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot transport"><div class="dot-inner"></div></div>
+          <div class="timeline-time">08:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🚃 名古屋 → 伊勢市</div>
+            <div class="timeline-desc">搭近鐵特急「しまかぜ」或普通特急，約1.5小時。持「伊勢鳥羽みちくさきっぷ」折扣乘車。抵達後可在伊勢市站附近取車（租車）</div>
+            <div class="timeline-tags"><span class="tag transport">近鐵特急</span><span class="tag note">約¥2,700</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">10:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">⛩️ 伊勢神宮 外宮（豊受大神宮）</div>
+            <div class="timeline-desc">按傳統先參拜外宮再內宮。供奉衣食住之神，森林莊嚴靜謐。步行約45分鐘</div>
+            <div class="timeline-tags"><span class="tag spot">世界級神社</span><span class="tag note">免費</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">11:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">⛩️ 伊勢神宮 內宮（皇大神宮）</div>
+            <div class="timeline-desc">日本最重要神社，供奉天照大神。宇治橋鳥居入口、五十鈴川清流、御正宮。12月人稍少，建議步行1.5小時</div>
+            <div class="timeline-tags"><span class="tag spot">日本最重要神社</span><span class="tag note">免費</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">13:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍡 おかげ横丁（托福橫丁）＆ おはらい町</div>
+            <div class="timeline-desc">緊鄰內宮，江戶風情街道。必吃：<br>・赤福本店（伊勢名物麻糬）¥450<br>・伊勢うどん（特軟白烏冬）¥750<br>・松阪牛串燒（奢侈一串）<br>・岩牡蠣（生蠔，冬季可能較少）<br>購物：伊勢工藝品、神宮御守</div>
+            <div class="timeline-tags"><span class="tag food">必吃</span><span class="tag shop">土產</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot transport"><div class="dot-inner"></div></div>
+          <div class="timeline-time">16:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🚗 移動至鳥羽（租車約30分）</div>
+            <div class="timeline-desc">今晚住鳥羽，明天可一早去鳥羽水族館，行程更輕鬆</div>
+            <div class="timeline-tags"><span class="tag transport">租車</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🦞 晚餐：鳥羽海鮮料理</div>
+            <div class="timeline-desc">鳥羽是海女文化發源地，新鮮伊勢海老（龍蝦）、鮑魚、牡蠣超便宜。推薦飯店附近「海女小屋」體驗</div>
+            <div class="timeline-tags"><span class="tag food">海鮮</span><span class="tag note">¥3,000–¥6,000</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day-block" id="day-7">
+      <div class="day-header">
+        <div class="day-num" style="background:#185FA5;">
+          <span class="num">07</span>
+          <span class="label">DAY</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12月24日 (四) 🎄</div>
+          <div class="day-title">鳥羽水族館 ＋ 御在所岳</div>
+          <div class="day-subtitle">聖誕節！儒艮 × 雪山纜車</div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">09:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🐬 鳥羽水族館（全日本唯一儒艮！）</div>
+            <div class="timeline-desc">展示日本唯一的儒艮（dugong）「碧」，超過1200種海洋生物。海女秀、水獺、白子龍蝦（稀少）。建議2.5–3小時</div>
+            <div class="timeline-tags"><span class="tag spot">全日本唯一</span><span class="tag note">¥2,800</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">12:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🦪 午餐：鳥羽牡蠣小屋</div>
+            <div class="timeline-desc">12月正是牡蠣季！直接在「海の駅 黒潮」現烤牡蠣，邊烤邊吃，一顆約¥300，超新鮮</div>
+            <div class="timeline-tags"><span class="tag food">牡蠣季</span><span class="tag note">¥1,500–¥2,500</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot transport"><div class="dot-inner"></div></div>
+          <div class="timeline-time">14:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🚗 鳥羽 → 御在所岳（湯之山温泉）</div>
+            <div class="timeline-desc">還車（或直接開車）往湯之山溫泉，約1小時車程。還車後搭近鐵至「湯の山温泉」站</div>
+            <div class="timeline-tags"><span class="tag transport">近鐵 / 租車</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">15:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🏔️ 御在所ロープウェイ</div>
+            <div class="timeline-desc">12月山頂有積雪！搭纜車上海拔1212m山頂，眺望伊勢灣全景，雪景絕美。下山後泡溫泉放鬆</div>
+            <div class="timeline-tags"><span class="tag spot">雪景絕景</span><span class="tag note">往復¥2,800</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🎄 聖誕晚餐：湯之山溫泉旅館</div>
+            <div class="timeline-desc">今晚住湯之山溫泉旅館，含晚餐懷石料理，泡天然溫泉，度過難忘的聖誕節！推薦「寿亭」或「グリーンホテル」</div>
+            <div class="timeline-tags"><span class="tag food">懷石料理</span><span class="tag note">含晚餐¥15,000–¥25,000/人</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 8 -->
+    <div class="day-block" id="day-8">
+      <div class="day-header">
+        <div class="day-num" style="background:#8B3A3A;">
+          <span class="num">08</span>
+          <span class="label">DAY</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12月25日 (五) 🎅</div>
+          <div class="day-title">返回名古屋 ＋ Pikmiin Spot ミジュマル公園</div>
+          <div class="day-subtitle">聖誕節遊戲角色打卡日</div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot transport"><div class="dot-inner"></div></div>
+          <div class="timeline-time">09:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🚃 湯之山溫泉 → 名古屋</div>
+            <div class="timeline-desc">搭近鐵湯之山線至四日市，轉名古屋線回名古屋。約1小時</div>
+            <div class="timeline-tags"><span class="tag transport">近鐵</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot shopping"><div class="dot-inner"></div></div>
+          <div class="timeline-time">11:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🐧 ミジュマル公園（水水公園）</div>
+            <div class="timeline-desc">位於名古屋市内，寶可夢 Wugtrio（三尾鰻）主題公園打卡點，有主題裝飾與扭蛋機，周邊玩具一次補齊！確認開放日期後前往</div>
+            <div class="timeline-tags"><span class="tag chiikawa">寶可夢</span><span class="tag shop">扭蛋</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">12:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍜 午餐：あんかけスパゲッティ</div>
+            <div class="timeline-desc">名古屋特有「あんかけスパ」，用濃稠醬汁拌義大利麵，名古屋五大名物之一。推薦「ヨコイ」本店</div>
+            <div class="timeline-tags"><span class="tag food">名古屋名物</span><span class="tag note">¥900–¥1,200</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot shopping"><div class="dot-inner"></div></div>
+          <div class="timeline-time">14:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🎮 ヨドバシカメラ ＋ ビックカメラ 名古屋</div>
+            <div class="timeline-desc">電器、玩具、扭蛋的天堂！Switch 遊戲、Nintendo 周邊、pikachu 扭蛋，聖誕節可能有特賣</div>
+            <div class="timeline-tags"><span class="tag shop">玩具</span><span class="tag shop">電器</span><span class="tag shop">扭蛋</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍾 聖誕晚餐：エスカ地下街</div>
+            <div class="timeline-desc">名古屋站地下街 Esca，聚集各種名古屋名物料理，隨喜好挑選，聖誕夜在燈火通明的地下美食街過節別有風味</div>
+            <div class="timeline-tags"><span class="tag food">晚餐</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 9 -->
+    <div class="day-block" id="day-9">
+      <div class="day-header">
+        <div class="day-num" style="background:#4A3570;">
+          <span class="num">09</span>
+          <span class="label">DAY</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12月26日 (六)</div>
+          <div class="day-title">任天堂博物館（宇治）</div>
+          <div class="day-subtitle">玩具迷的麥加聖地！🎮</div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot transport"><div class="dot-inner"></div></div>
+          <div class="timeline-time">07:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🚅 名古屋 → 京都 → 宇治</div>
+            <div class="timeline-desc">新幹線名古屋→京都（約35分，¥3,430），再搭近鐵京都線或JR奈良線至宇治（約30分）。請提前抽中門票！</div>
+            <div class="timeline-tags"><span class="tag transport">新幹線＋近鐵</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">10:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🎮 任天堂博物館（ニンテンドーミュージアム）</div>
+            <div class="timeline-desc">展示任天堂歷代產品，從花札到 Switch，可動手玩放大版遊戲機。Museum Shop 有超限定商品，建議預留3小時以上！⚠️ 需事先網路抽籤，每月15日12:00抽下月</div>
+            <div class="timeline-tags"><span class="tag spot">任天堂</span><span class="tag shop">限定周邊</span><span class="tag note">¥3,300</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">13:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍵 午餐：宇治抹茶體驗</div>
+            <div class="timeline-desc">宇治是全日本最有名的抹茶產地。博物館附近「中村藤吉本店」抹茶拿鐵、抹茶甜品午餐套組，或抹茶うどん</div>
+            <div class="timeline-tags"><span class="tag food">宇治名物</span><span class="tag note">¥1,200–¥1,800</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">15:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">⛩️ 宇治上神社（世界遺産）</div>
+            <div class="timeline-desc">日本最古老的神社建築，就在任天堂博物館步行範圍內，順道參拜，沾染文化氣息</div>
+            <div class="timeline-tags"><span class="tag spot">世界遺産</span><span class="tag note">免費</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot transport"><div class="dot-inner"></div></div>
+          <div class="timeline-time">16:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🚅 宇治 → 名古屋</div>
+            <div class="timeline-desc">返回名古屋，輕鬆晚餐，整理戰利品，明天大採購日</div>
+            <div class="timeline-tags"><span class="tag transport">返程</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">19:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍛 晚餐：名古屋カレー（スパカツ）</div>
+            <div class="timeline-desc">輕鬆吃飯，推薦松坂屋百貨內的餐廳或地下食品街採購甜點</div>
+            <div class="timeline-tags"><span class="tag food">晚餐</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 10 -->
+    <div class="day-block" id="day-10">
+      <div class="day-header">
+        <div class="day-num" style="background:#7A4A20;">
+          <span class="num">10</span>
+          <span class="label">DAY</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12月27日 (日)</div>
+          <div class="day-title">最後血拼日 ＋ 大須 Part 2</div>
+          <div class="day-subtitle">伴手禮 · 超市 · 採購衝刺</div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot shopping"><div class="dot-inner"></div></div>
+          <div class="timeline-time">10:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🛒 矢場町 ＋ 大須商店街（二刷）</div>
+            <div class="timeline-desc">補貨扭蛋、玩具（スーパーポテト、バンダイ扭蛋）、Chiikawa 限定品。最後機會！不要客氣</div>
+            <div class="timeline-tags"><span class="tag shop">扭蛋</span><span class="tag shop">玩具</span><span class="tag chiikawa">ちいかわ</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">12:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍱 午餐：激安定食（安くて美味しい）</div>
+            <div class="timeline-desc">大須商街內小吃：手羽唐揚、鯛魚燒、天婦羅串。站著邊走邊吃最有趣</div>
+            <div class="timeline-tags"><span class="tag food">小吃</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot shopping"><div class="dot-inner"></div></div>
+          <div class="timeline-time">14:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🛒 カルディ ＋ イオン ＋ マックスバリュ（超市掃貨）</div>
+            <div class="timeline-desc">日本超市必買：<br>・卡樂比洋芋片限定口味<br>・キットカット 抹茶 / 酒粕 / 地區限定<br>・グミ、ハイチュウ各種<br>・調味料（白だし、出汁、みりん）<br>・各式漬物、土產</div>
+            <div class="timeline-tags"><span class="tag shop">超市</span><span class="tag shop">伴手禮</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot shopping"><div class="dot-inner"></div></div>
+          <div class="timeline-time">16:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🧳 回飯店整理行李</div>
+            <div class="timeline-desc">打包行李，確認明天班機（CI173, 19:00），計算超重，必要時採購輕巧收納袋</div>
+            <div class="timeline-tags"><span class="tag note">行前準備</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">19:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🥂 最後晚餐：鉄板焼 or 焼肉</div>
+            <div class="timeline-desc">旅程的最後奢侈晚餐！推薦「焼肉 一升びん」名古屋在地連鎖，品質穩定，赤味噌醃製的名古屋牛超香</div>
+            <div class="timeline-tags"><span class="tag food">最後晚餐</span><span class="tag note">¥3,000–¥5,000</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 11 -->
+    <div class="day-block" id="day-11">
+      <div class="day-header">
+        <div class="day-num" style="background:#C4778A;">
+          <span class="num">11</span>
+          <span class="label">DAY</span>
+        </div>
+        <div class="day-info">
+          <div class="day-date">12月28日 (一)</div>
+          <div class="day-title">回台灣 🏠</div>
+          <div class="day-subtitle">名古屋 → 關西機場 → 桃園</div>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">08:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">☕ 最後的コメダ早餐</div>
+            <div class="timeline-desc">再來一次紅豆吐司早餐，回味名古屋早餐文化，說再見</div>
+            <div class="timeline-tags"><span class="tag food">早餐</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot transport"><div class="dot-inner"></div></div>
+          <div class="timeline-time">10:30</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🚃 名古屋 → 關西機場</div>
+            <div class="timeline-desc">搭近鐵特急アーバンライナー至大阪難波，再轉南海電鐵至關西機場，或搭近鐵→JR。建議至少提前3小時抵達機場</div>
+            <div class="timeline-tags"><span class="tag transport">近鐵 + 南海</span><span class="tag note">約2.5小時</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot meal"><div class="dot-inner"></div></div>
+          <div class="timeline-time">15:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🍱 午餐：關西機場 Sky Court 美食區</div>
+            <div class="timeline-desc">機場2F有各種餐廳，推薦吃最後一頓拉麵或壽司，也可在免稅店最後採購零食</div>
+            <div class="timeline-tags"><span class="tag food">午餐</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot transport"><div class="dot-inner"></div></div>
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-content">
+            <div class="timeline-title">✈ CI 173 KIX → TPE 出發</div>
+            <div class="timeline-desc">帶著滿滿的回憶與行李，平安回台！</div>
+            <div class="timeline-tags"><span class="tag transport">CI173</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><div class="dot-inner"></div></div>
+          <div class="timeline-time">21:15</div>
+          <div class="timeline-content">
+            <div class="timeline-title">🏠 抵達台灣桃園國際機場</div>
+            <div class="timeline-desc">旅程圓滿結束！またね、日本 🌸</div>
+          </div>
+        </div>
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- ────────── 住宿推薦 ────────── -->
-<div class="section" id="hotels">
-  <div class="section-title">住宿推薦</div>
-  <p class="section-sub">HOTEL GUIDE　|　全選車站共構或步行 5 分內，方便行李搬運</p>
-
-  <div class="hotel-grid">
-
-    <div class="hotel-card">
-      <div class="hotel-header">
-        <div>
-          <div class="hotel-city">📍 京都　D1–D3　3晚</div>
-          <div class="hotel-nights">12/18 – 12/21</div>
-        </div>
-        <div class="hotel-budget-badge">¥16,000/晚　小計 ¥48,000</div>
-      </div>
-      <div class="hotel-body">
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">推①</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">相鐵 Fresa Inn 京都八条口</div>
-            <div class="hotel-rec-note">JR 京都站步行 3 分，CP 值超高，早餐優質。¥14,000–16,000/2人。</div>
-          </div>
-        </div>
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">推②</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">JR Hotel Clement Kyoto（伊瑟酒店）</div>
-            <div class="hotel-rec-note">JR 京都站直結，行李免搬，位置絕佳。¥18,000–22,000/2人。</div>
-          </div>
-        </div>
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">推③</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">Via Inn 京都八条口</div>
-            <div class="hotel-rec-note">平價舒適，京都站步行 3 分，¥12,000–15,000/2人。</div>
-          </div>
+<!-- HOTELS -->
+<section class="section alt">
+  <div class="container">
+    <p class="section-label">🏨 推薦住宿</p>
+    <h2 class="section-title">飯店攻略</h2>
+    <p class="section-desc">優先選擇車站共構或徒步圈，行李重也不怕！</p>
+    <div class="hotel-grid">
+      <div class="hotel-card">
+        <div class="hotel-emoji">🏨</div>
+        <div class="hotel-body">
+          <div class="hotel-nights">Day 1–4 ＆ Day 8–10（共7晚）</div>
+          <div class="hotel-name">名古屋 JR ゲートタワーホテル</div>
+          <div class="hotel-location">📍 名古屋站直結</div>
+          <div class="hotel-access">與 JR 名古屋站直結，高層景觀房俯瞰名古屋市區，距百貨、大型商場步行即達，行李重完全不是問題</div>
+          <div class="hotel-budget">💴 ¥18,000–¥30,000 / 晚（2人）</div>
+          <div class="hotel-note">★ 旺季（聖誕、年末）建議提早2–3個月訂房</div>
         </div>
       </div>
-    </div>
-
-    <div class="hotel-card">
-      <div class="hotel-header">
-        <div>
-          <div class="hotel-city">📍 鳥羽　D3–D5　2晚</div>
-          <div class="hotel-nights">12/21 – 12/23</div>
-        </div>
-        <div class="hotel-budget-badge">¥15,000/晚　小計 ¥30,000</div>
-      </div>
-      <div class="hotel-body">
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">推①</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">コンフォートホテル鳥羽</div>
-            <div class="hotel-rec-note">近鐵鳥羽站步行 3 分，商務舒適型，¥12,000–15,000/2人。</div>
-          </div>
-        </div>
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">推②</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">鳥羽シーサイドホテル</div>
-            <div class="hotel-rec-note">可望鳥羽灣的海景房，¥18,000–25,000/2人。</div>
-          </div>
-        </div>
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">＋升級</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">溫泉旅館（豪華升等選項）</div>
-            <div class="hotel-rec-note">若想體驗三重溫泉旅館，可選「戀の宿 松鶴」等，含晚餐早餐約 ¥25,000–35,000/2人。</div>
-          </div>
+      <div class="hotel-card">
+        <div class="hotel-emoji">🏩</div>
+        <div class="hotel-body">
+          <div class="hotel-nights">Day 1–4 省錢替代方案</div>
+          <div class="hotel-name">名古屋プライムセントラルタワー（APA）</div>
+          <div class="hotel-location">📍 名古屋站徒步3分</div>
+          <div class="hotel-access">APA 集團，名古屋站極近，房間乾淨實用，CP 值極高，附近便利商店24小時</div>
+          <div class="hotel-budget">💴 ¥10,000–¥15,000 / 晚（2人）</div>
+          <div class="hotel-note">可於 APA 官網直訂最優惠</div>
         </div>
       </div>
-    </div>
-
-    <div class="hotel-card">
-      <div class="hotel-header">
-        <div>
-          <div class="hotel-city">📍 名古屋　D5–D9　4晚</div>
-          <div class="hotel-nights">12/22 – 12/26</div>
-        </div>
-        <div class="hotel-budget-badge">¥17,000/晚　小計 ¥68,000</div>
-      </div>
-      <div class="hotel-body">
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">推①</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">JR Gate Tower Hotel 名古屋</div>
-            <div class="hotel-rec-note">JR 名古屋站直結（15F 以上），轉乘新幹線、近鐵、地鐵一步到位。¥20,000–28,000/2人。</div>
-          </div>
-        </div>
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">推②</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">名古屋プリンスホテルスカイタワー</div>
-            <div class="hotel-rec-note">名古屋站前步行 3 分，高樓夜景絕美，¥18,000–24,000/2人。</div>
-          </div>
-        </div>
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">推③</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">Dormy Inn Premium 名古屋榮</div>
-            <div class="hotel-rec-note">天然溫泉，榮（大須）步行圈，性價比極高，¥14,000–18,000/2人。</div>
-          </div>
+      <div class="hotel-card">
+        <div class="hotel-emoji">🌊</div>
+        <div class="hotel-body">
+          <div class="hotel-nights">Day 6（伊勢・鳥羽）</div>
+          <div class="hotel-name">鳥羽グランドホテル</div>
+          <div class="hotel-location">📍 鳥羽站徒步5分</div>
+          <div class="hotel-access">面向鳥羽灣海景，附露天風呂溫泉，早晚餐會席料理，聖誕夜前後住海景旅館超有氣氛</div>
+          <div class="hotel-budget">💴 ¥18,000–¥28,000 / 人（含兩食）</div>
+          <div class="hotel-note">含早晚餐，實際開銷很划算</div>
         </div>
       </div>
-    </div>
-
-    <div class="hotel-card">
-      <div class="hotel-header">
-        <div>
-          <div class="hotel-city">📍 大阪難波　D9–D11　2晚</div>
-          <div class="hotel-nights">12/26 – 12/28</div>
+      <div class="hotel-card">
+        <div class="hotel-emoji">♨️</div>
+        <div class="hotel-body">
+          <div class="hotel-nights">Day 7（御在所岳 / 聖誕節）</div>
+          <div class="hotel-name">湯の山温泉 寿亭</div>
+          <div class="hotel-location">📍 湯の山温泉站附近</div>
+          <div class="hotel-access">百年溫泉老旅館，三重縣名湯，聖誕夜泡湯吃懷石，超級享受！可安排免費接駁車接送</div>
+          <div class="hotel-budget">💴 ¥20,000–¥35,000 / 人（含兩食）</div>
+          <div class="hotel-note">聖誕特別方案需提早訂！</div>
         </div>
-        <div class="hotel-budget-badge">¥16,000/晚　小計 ¥32,000</div>
-      </div>
-      <div class="hotel-body">
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">推①</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">Dormy Inn Premium 難波</div>
-            <div class="hotel-rec-note">天然溫泉，難波站步行 5 分，Chiikawa Land 步行圈，¥14,000–18,000/2人。</div>
-          </div>
-        </div>
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">推②</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">Cross Hotel Osaka</div>
-            <div class="hotel-rec-note">心齋橋商圈核心，設計風格獨特，¥15,000–20,000/2人。</div>
-          </div>
-        </div>
-        <div class="hotel-rec">
-          <div class="hotel-rec-num">推③</div>
-          <div class="hotel-rec-info">
-            <div class="hotel-rec-name">OMO7 大阪 by 星野リゾート</div>
-            <div class="hotel-rec-note">難波鬧中取靜，設計感強，含早餐約 ¥22,000–30,000/2人。</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <p style="font-size:12px;color:var(--muted);margin-top:16px;line-height:1.8;padding:14px;background:var(--cream);border-radius:6px;">
-    ⚠️ 12 月為日本旅遊旺季（聖誕節、年末），飯店價格可能有 ±20% 浮動，建議行程確認後立即預訂（3–4 個月前）。
-    可使用 Booking.com、一休.com、じゃらん 比價選購。所有推薦均在最近車站步行 5 分鐘內或直結。
-  </p>
-</div>
-
-<!-- ────────── 購物攻略 ────────── -->
-<div class="section" id="shopping">
-  <div class="section-title">購物攻略</div>
-  <p class="section-sub">SHOPPING GUIDE　|　Chiikawa × 皮克敏 × 扭蛋 × 超市</p>
-
-  <div class="shop-grid">
-    <div class="shop-card">
-      <div class="shop-icon">🐭</div>
-      <div class="shop-name">Chiikawa Land</div>
-      <div class="shop-spots">
-        📍 大阪 心齋橋大丸<br>
-        📍 各地 Village Vanguard<br>
-        📍 各地 Loft 選品<br>
-        💡 D9、D10 心齋橋大丸各去一次
-      </div>
-    </div>
-    <div class="shop-card">
-      <div class="shop-icon">🎮</div>
-      <div class="shop-name">Nintendo / 皮克敏</div>
-      <div class="shop-spots">
-        📍 Nintendo OSAKA（梅田大丸 13F）<br>
-        📍 任天堂博物館 Shop（宇治）<br>
-        📍 Yodobashi Camera 各店<br>
-        💡 D2 博物館＋D10 旗艦店雙衝
-      </div>
-    </div>
-    <div class="shop-card">
-      <div class="shop-icon">🎰</div>
-      <div class="shop-name">扭蛋・玩具</div>
-      <div class="shop-spots">
-        📍 大須商店街（名古屋）D6<br>
-        📍 Gacha Gacha No Mise 心齋橋（800+台）<br>
-        📍 難波 KiddyLand<br>
-        📍 各地 Toys R Us
-      </div>
-    </div>
-    <div class="shop-card">
-      <div class="shop-icon">🛒</div>
-      <div class="shop-name">超市・藥妝</div>
-      <div class="shop-spots">
-        📍 難波 Don Quijote（24h）<br>
-        📍 梅田 阪急百貨 B1<br>
-        📍 Matsumoto Kiyoshi 各店<br>
-        📍 Welcia（部分店深夜營業）
       </div>
     </div>
   </div>
+</section>
 
-  <div style="margin-top:16px;padding:18px 20px;background:#fff;border:1px solid var(--border);border-radius:6px;">
-    <p style="font-size:13px;font-weight:500;color:var(--navy);margin-bottom:10px;">💴 退稅小提醒</p>
-    <p style="font-size:12px;color:var(--muted);line-height:1.8;">
-      單店單日消費滿 ¥5,000（未稅）可申請退稅（消耗品如食品、藥妝）。務必帶護照！
-      百貨公司可在服務台統一辦理，便利又省時。建議集中在一家百貨或大型商場購買，一次達到退稅門檻。
-    </p>
+<!-- SHOPPING GUIDE -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">🛍️ 購物攻略</p>
+    <h2 class="section-title">必買必逛清單</h2>
+    <div class="shopping-grid">
+      <div class="shop-card">
+        <span class="shop-emoji">🐾</span>
+        <div class="shop-name">Chiikawa 完整攻略</div>
+        <div class="shop-items">
+          ・<strong>Chiikawa Land</strong>（名古屋高島屋）— 官方旗艦<br>
+          ・<strong>ちいかわもぐもぐ本舗</strong> — 食品周邊<br>
+          ・<strong>ナガノマーケット</strong> — 相關角色<br>
+          ・<strong>ちいかわ焼き</strong> — 人形燒（現場吃）<br>
+          ・Plaza、Loft、ドンキ 也有販售
+        </div>
+      </div>
+      <div class="shop-card">
+        <span class="shop-emoji">🎮</span>
+        <div class="shop-name">玩具 ＆ 扭蛋</div>
+        <div class="shop-items">
+          ・<strong>大須 バンダイナムコ扭蛋</strong> — 數百台機<br>
+          ・<strong>スーパーポテト</strong> — 復古遊戲<br>
+          ・<strong>ヨドバシ / ビックカメラ</strong> — 電器玩具<br>
+          ・<strong>任天堂博物館 Shop</strong> — 超限定<br>
+          ・<strong>ミジュマル公園</strong> — 寶可夢扭蛋
+        </div>
+      </div>
+      <div class="shop-card">
+        <span class="shop-emoji">🛒</span>
+        <div class="shop-name">超市必買</div>
+        <div class="shop-items">
+          ・卡樂比洋芋片限定口味<br>
+          ・KitKat 地區限定（白味噌、抹茶）<br>
+          ・白だし、みりん 調味料<br>
+          ・有楽製菓 ブラックサンダー<br>
+          ・名古屋限定 ういろう（外郎糕）<br>
+          ・推薦：ピアゴ、アピタ、マックスバリュ
+        </div>
+      </div>
+      <div class="shop-card">
+        <span class="shop-emoji">🌿</span>
+        <div class="shop-name">伊勢 ＆ 三重伴手禮</div>
+        <div class="shop-items">
+          ・赤福餅（伊勢名物，冷凍可帶回）<br>
+          ・神宮御守（正規開光）<br>
+          ・伊勢うどん（乾麺）<br>
+          ・伊勢志摩産牡蠣醬<br>
+          ・真珠飾品（鳥羽・志摩特產）
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- ────────── 旅遊貼士 ────────── -->
-<div class="section" id="tips">
-  <div class="section-title">旅遊貼士</div>
-  <p class="section-sub">TRAVEL TIPS　|　讓旅途更順暢的小知識</p>
+<!-- BUDGET -->
+<section class="section alt">
+  <div class="container">
+    <p class="section-label">💰 旅費預算</p>
+    <h2 class="section-title">2人總預算參考</h2>
+    <p class="section-desc">含住宿、交通、餐飲、門票、購物，不含機票</p>
+    <table class="budget-table">
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>說明</th>
+          <th>預估（2人）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>✈ 去回程交通（KIX↔名古屋）</td>
+          <td>近鐵特急 × 2趟 × 2人</td>
+          <td>¥15,400</td>
+        </tr>
+        <tr>
+          <td>🚃 名古屋市內交通</td>
+          <td>地鐵、巴士 7日份</td>
+          <td>¥8,000</td>
+        </tr>
+        <tr>
+          <td>🚅 名古屋↔宇治（任天堂博物館）</td>
+          <td>新幹線 × 2人往返</td>
+          <td>¥13,720</td>
+        </tr>
+        <tr>
+          <td>🚗 租車（伊勢・鳥羽 2日）</td>
+          <td>含保險、高速公路費</td>
+          <td>¥15,000</td>
+        </tr>
+        <tr>
+          <td>🏨 名古屋住宿（7晚）</td>
+          <td>APA 或同級，2人1室</td>
+          <td>¥84,000</td>
+        </tr>
+        <tr>
+          <td>🏨 鳥羽旅館（1晚，含2食）</td>
+          <td>含早晚餐海鮮料理</td>
+          <td>¥36,000</td>
+        </tr>
+        <tr>
+          <td>♨️ 湯之山溫泉（1晚，含2食）</td>
+          <td>聖誕節懷石料理</td>
+          <td>¥50,000</td>
+        </tr>
+        <tr>
+          <td>🎟 票券合計</td>
+          <td>水族館×2、鳥羽×2、纜車×2、名城×2、燈會×2、任天堂×2</td>
+          <td>¥34,260</td>
+        </tr>
+        <tr>
+          <td>🍜 餐飲（10日份，2人）</td>
+          <td>平均¥3,000/人/日</td>
+          <td>¥60,000</td>
+        </tr>
+        <tr>
+          <td>🛍️ 購物＋伴手禮</td>
+          <td>Chiikawa、扭蛋、玩具、超市（預估）</td>
+          <td>¥50,000</td>
+        </tr>
+        <tr class="total">
+          <td>🇯🇵 總計（2人 / 日圓）</td>
+          <td>不含機票，購物金額依個人調整</td>
+          <td>¥366,380</td>
+        </tr>
+        <tr class="total">
+          <td>💵 換算新台幣參考</td>
+          <td>以 1 JPY ≈ 0.22 TWD 計算</td>
+          <td>約 NT$ 80,600</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-  <div class="tips-grid">
-    <div class="tip-card">
-      <div class="tip-title">📱 通訊網路</div>
-      <div class="tip-body">出發前購買日本 eSIM（推薦 IIJmio 或 NTT Docomo eSIM），10 日約 NT$400–700，隨到隨用不用換卡。</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-title">🎟️ 任天堂博物館抽票</div>
-      <div class="tip-body">每月 1 日前後開放次月場次抽籤，12/19 需 11 月抽。建議設好行事曆提醒，一次可抽最多 2 人票。未中籤可改行程至京都祇園或嵐山。</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-title">🌡️ 12 月天氣</div>
-      <div class="tip-body">京都・名古屋日間 10–15°C，早晚約 5–8°C；御在所岳山頂可能零下，務必帶厚外套、手套、圍巾。名花之里夜間只有 3–8°C，一定要穿暖！</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-title">📦 行李宅配服務</div>
-      <div class="tip-body">購物太多時可使用宅急便（ヤマト運輸）從飯店寄至關西機場，旺季建議提前 3 天寄出，¥1,500–2,000/箱，省去扛重之苦。</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-title">💳 現金 vs. 刷卡</div>
-      <div class="tip-body">大型百貨、超市、連鎖餐廳多可刷卡。小攤位、神社周邊茶屋、扭蛋多需現金。建議備妥 ¥30,000–50,000 現金，ICOCA 可隨時加值。</div>
-    </div>
-    <div class="tip-card">
-      <div class="tip-title">⛰️ 御在所岳注意事項</div>
-      <div class="tip-body">12 月強風日可能停纜，出發前務必確認官網運行狀況（gozaisho.co.jp）。若臨時停運，可改行程至四日市、長島溫泉等景點。</div>
+<!-- TIPS -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">💡 達人小提醒</p>
+    <h2 class="section-title">旅行前必知</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon">⚠️</div>
+        <div class="tip-title">任天堂博物館搶票</div>
+        <div class="tip-desc">每月15日中午12:00開放下月抽籤，12月初必須搶1月份！若12月中旬出發前，先確認11月15日是否搶到12月票。人氣超高，不搶到就進不去。</div>
+      </div>
+      <div class="tip-card green">
+        <div class="tip-icon">🎴</div>
+        <div class="tip-title">年末氣氛超棒</div>
+        <div class="tip-desc">12月下旬日本進入「年末」模式，百貨公司、商店街燈飾滿點，處處充滿節日氣氛！但年末特賣通常12月26日後才開始，可把握最後幾天撿便宜。</div>
+      </div>
+      <div class="tip-card gold">
+        <div class="tip-icon">🌨️</div>
+        <div class="tip-title">禦寒準備</div>
+        <div class="tip-desc">名古屋12月均溫5–12°C，御在所岳山頂可能-5°C。建議攜帶：羽絨外套、手套、暖暖包（日本超商買）、防滑雪靴（御在所岳）。</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon">💳</div>
+        <div class="tip-title">付款準備</div>
+        <div class="tip-desc">準備 SUICA 或 ICOCA 交通卡，大部分超市、便利商店、自動販賣機可用。小型店家、神社周邊可能只收現金，備¥20,000現金在身。</div>
+      </div>
+      <div class="tip-card green">
+        <div class="tip-icon">🍱</div>
+        <div class="tip-title">名古屋五大名物別錯過</div>
+        <div class="tip-desc">① ひつまぶし鰻魚飯、② 味噌豬排（矢場とん）、③ 手羽先（世界の山ちゃん）、④ 台灣まぜそば、⑤ 味噌煮込みうどん。全部吃到才算完整名古屋體驗！</div>
+      </div>
+      <div class="tip-card gold">
+        <div class="tip-icon">📦</div>
+        <div class="tip-title">行李超重對策</div>
+        <div class="tip-desc">購物狂最怕超重！建議帶一個可折疊的大型購物袋或行李箱。也可使用日本「宅急便」直送機場服務（前一天寄出）。CI 經濟艙含 23kg × 1，出發前確認額度。</div>
+      </div>
     </div>
   </div>
-</div>
-
-</div><!-- /main -->
+</section>
 
 <footer>
-  <div>日本 冬旅 2026　|　關西 × 三重 × 名古屋 × 大阪</div>
-  <div style="margin-top:8px;">預算試算僅供參考，實際費用依當日匯率及個人消費習慣而異</div>
+  <p>🌸 <strong>日本自由行 2026 行程規劃</strong> 🌸</p>
+  <p style="margin-top:0.75rem;">名古屋 · 伊勢 · 三重 · 宇治 · 湯之山 | 12/18–12/28 | 2大人</p>
+  <p style="margin-top:0.5rem;">旅遊資訊僅供參考，出發前請再次確認各景點營業時間、票券資訊與交通時刻。またね日本！</p>
 </footer>
 
 <script>
-function toggleDay(header) {
-  const body = header.nextElementSibling;
-  const chev = header.querySelector('.chevron');
-  const open = body.classList.toggle('open');
-  chev.classList.toggle('open', open);
-}
-
-function scrollTo(id, btn) {
-  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+function showDay(n, btn) {
+  document.querySelectorAll('.day-block').forEach(d => d.classList.remove('visible'));
+  document.querySelectorAll('.day-nav-btn').forEach(b => b.classList.remove('active'));
+  const target = document.getElementById('day-' + n);
+  if (target) {
+    target.classList.add('visible');
+    target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
   btn.classList.add('active');
 }
-
-// Update active nav on scroll
-const sections = ['itinerary','budget','tickets','hotels','shopping','tips'];
-const navBtns = document.querySelectorAll('.nav-btn');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(id => {
-    const el = document.getElementById(id);
-    if (el && window.scrollY >= el.offsetTop - 100) current = id;
-  });
-  navBtns.forEach((btn, i) => {
-    btn.classList.toggle('active', sections[i] === current);
-  });
-});
 </script>
+
 </body>
 </html>
